@@ -1,1 +1,114 @@
+/* ==================================================
+   BACKGROUND
+================================================== */
 
+body {
+
+    position: relative;
+
+    background:
+
+        radial-gradient(circle at top left,
+            #dffcff 0%,
+            #d3f7ff 25%,
+            #eafcff 55%,
+            #f7feff 100%);
+
+}
+
+
+/* ==================================================
+   BLOBS
+================================================== */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: -2;
+
+    background:
+
+        radial-gradient(circle at 15% 20%,
+            rgba(0,210,255,.18),
+            transparent 30%),
+
+        radial-gradient(circle at 85% 30%,
+            rgba(45,90,220,.15),
+            transparent 32%),
+
+        radial-gradient(circle at 55% 90%,
+            rgba(0,255,220,.12),
+            transparent 30%);
+
+    filter: blur(70px);
+
+}
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+    background:
+
+        radial-gradient(circle at 75% 15%,
+
+            rgba(18,40,110,.10),
+
+            transparent 28%),
+
+
+        radial-gradient(circle at 20% 80%,
+
+            rgba(15,30,90,.08),
+
+            transparent 35%),
+
+
+        radial-gradient(circle at 100% 100%,
+
+            rgba(0,30,80,.10),
+
+            transparent 30%);
+
+}
+
+.wave{
+
+    position:fixed;
+
+    inset:0;
+
+    opacity:.05;
+
+    background-image:
+
+        repeating-radial-gradient(
+
+            circle at 0% 100%,
+
+            transparent 0,
+
+            transparent 18px,
+
+            rgba(0,120,255,.4) 19px,
+
+            transparent 20px
+
+        );
+
+}
