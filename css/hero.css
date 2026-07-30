@@ -10,11 +10,11 @@
 
     justify-content: center;
 
-    align-items: flex-start;
+    align-items: center;
 
     min-height: calc(100vh - 90px);
 
-    padding: 7rem 1.5rem 3rem;
+    padding: 7rem 1.5rem 4rem;
 
 }
 
@@ -29,17 +29,15 @@
 
     z-index: 2;
 
-    width: min(560px, 92vw);
+    width: min(540px, 92vw);
 
-    max-width: 560px;
+    padding: 2.5rem;
 
-    padding: 2.3rem;
-
-    margin-top: 2rem;
-
-    border-radius: 28px;
+    border-radius: 30px;
 
     text-align: center;
+
+    animation: cardFloat 10s ease-in-out infinite;
 
 }
 
@@ -54,26 +52,27 @@
 
     align-items: center;
 
-    gap: .6rem;
+    gap: .65rem;
 
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.8rem;
 
-    padding: .45rem .9rem;
+    padding: .55rem 1rem;
 
     border-radius: 999px;
 
-    background: rgba(255,255,255,.18);
+    background: rgba(255,255,255,.10);
 
-    border: 1px solid rgba(255,255,255,.35);
+    border: 1px solid rgba(255,255,255,.22);
+
+    backdrop-filter: blur(20px);
 
     color: var(--text-secondary);
 
-    font-size: .9rem;
+    font-size: .88rem;
+
+    font-weight: 500;
 
 }
-
-
-/* LED */
 
 .status-dot {
 
@@ -84,8 +83,6 @@
     border-radius: 50%;
 
     background: #00d66f;
-
-    box-shadow: 0 0 12px #00d66f;
 
     animation: pulseLED 2.5s infinite;
 
@@ -98,37 +95,43 @@
 
 .hero h1 {
 
-    font-size: clamp(2.8rem, 6vw, 4.2rem);
+    margin: 0 0 .8rem;
+
+    font-size: clamp(2.8rem, 6vw, 4.4rem);
 
     font-weight: 800;
 
-    line-height: .95;
+    letter-spacing: -.04em;
 
-    margin-bottom: .9rem;
+    line-height: .92;
+
+    color: var(--text-primary);
 
 }
 
 .hero h2 {
 
-    font-size: 1rem;
+    margin-bottom: 1.2rem;
+
+    font-size: 1.05rem;
 
     font-weight: 600;
 
     color: var(--color-primary-dark);
 
-    margin-bottom: 1rem;
+    letter-spacing: .02em;
 
 }
 
 .hero p {
 
-    max-width: 500px;
+    max-width: 470px;
 
-    margin: 0 auto 1.8rem;
+    margin: 0 auto 2rem;
 
     font-size: 1.05rem;
 
-    line-height: 1.7;
+    line-height: 1.8;
 
     color: var(--text-secondary);
 
@@ -145,7 +148,11 @@
 
     justify-content: center;
 
+    align-items: center;
+
     gap: 1rem;
+
+    margin-top: .5rem;
 
     flex-wrap: wrap;
 
@@ -162,17 +169,21 @@
 
     justify-content: center;
 
-    gap: 1.5rem;
+    gap: 1.8rem;
 
-    margin-top: 1.8rem;
+    margin-top: 2rem;
 
 }
 
 .hero-social a {
 
+    position: relative;
+
     color: var(--text-secondary);
 
     text-decoration: none;
+
+    font-size: .95rem;
 
     transition: color .3s ease;
 
@@ -186,17 +197,6 @@
 
 
 /* ==================================================
-   ANIMATIONS
-================================================== */
-
-.hero-card {
-
-    animation: cardFloat 8s ease-in-out infinite;
-
-}
-
-
-/* ==================================================
    MOBILE
 ================================================== */
 
@@ -204,7 +204,9 @@
 
     .hero {
 
-        padding: 6rem 1rem 2rem;
+        min-height: auto;
+
+        padding: 6.5rem 1rem 3rem;
 
     }
 
@@ -214,13 +216,13 @@
 
         padding: 2rem;
 
-        margin-top: 1rem;
+        border-radius: 26px;
 
     }
 
     .hero h1 {
 
-        font-size: clamp(2.4rem, 10vw, 3.2rem);
+        font-size: clamp(2.3rem, 10vw, 3.3rem);
 
     }
 
@@ -234,19 +236,29 @@
 
         font-size: 1rem;
 
+        line-height: 1.7;
+
     }
 
     .hero-buttons {
 
         flex-direction: column;
 
-        align-items: stretch;
+        width: 100%;
 
     }
 
     .hero-buttons .btn {
 
         width: 100%;
+
+    }
+
+    .hero-social {
+
+        gap: 1.2rem;
+
+        flex-wrap: wrap;
 
     }
 
