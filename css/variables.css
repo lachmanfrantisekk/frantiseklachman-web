@@ -1,289 +1,242 @@
 /* ==================================================
-   ROOT VARIABLES  
+   ROOT VARIABLES
    Frantisek Lachman Portfolio
 ================================================== */
 
-:root {
+:root{
 
-    /* ==========================================
+    /* ==================================================
        BRAND COLORS
-    ========================================== */
+    ================================================== */
 
-    --color-primary: #00d9ff;
-    --color-primary-light: #7af4ff;
-    --color-primary-dark: #0a92d1;
+    --color-primary:#00d9ff;
+    --color-primary-dark:#0a92d1;
+    --color-primary-light:#7af4ff;
 
-    --color-secondary: #4f8fff;
-    --color-accent: #00ffd0;
+    --color-secondary:#4f8fff;
+    --color-accent:#00ffd0;
 
-    --color-success: #00d66f;
-    --color-warning: #ffb84d;
-    --color-danger: #ff5f7d;
+    --color-success:#00d66f;
+    --color-warning:#ffb84d;
+    --color-danger:#ff5f7d;
 
-    --color-white: #ffffff;
-    --color-black: #000000;
+    --white:#ffffff;
+    --black:#000000;
 
 
-    /* ==========================================
+    /* ==================================================
        LIGHT THEME
-    ========================================== */
+    ================================================== */
 
-    --bg-main: #eefcff;
-    --bg-secondary: #def8ff;
-    --bg-tertiary: #f8feff;
+    --bg-main:#d8f3ff;
+    --bg-secondary:#c9ecff;
+    --bg-tertiary:#edfaff;
 
-    --bg-card: rgba(255,255,255,.12);
+    --text-primary:#10273b;
+    --text-secondary:#4f6677;
+    --text-muted:#8196a8;
 
-    --text-primary: #10273b;
-    --text-secondary: #4f6677;
-    --text-muted: #7f96a8;
-
-    --border-color: rgba(255,255,255,.25);
-
-   
-/* ==================================================
-   BACKGROUND BLOBS
-================================================== */
-
---blob-1: rgba(0,220,255,.22);
---blob-2: rgba(35,110,255,.18);
---blob-3: rgba(0,255,208,.18);
-
---blob-dark-1: rgba(8,35,110,.22);
---blob-dark-2: rgba(5,60,150,.16);
---blob-dark-3: rgba(0,90,170,.14);
-
---noise-opacity: .025;
-
---wave-opacity: .05;
+    --border-color:rgba(255,255,255,.28);
 
 
-    /* ==========================================
+    /* ==================================================
        GLASS
-    ========================================== */
+    ================================================== */
 
-    --glass-bg: rgba(255,255,255,.10);
+    --glass-bg:rgba(255,255,255,.12);
 
-    --glass-border: rgba(255,255,255,.25);
+    --glass-border:rgba(255,255,255,.26);
 
-    --glass-highlight: rgba(255,255,255,.45);
+    --glass-highlight:rgba(255,255,255,.45);
 
     --glass-shadow:
-
-        0 20px 60px rgba(0,40,120,.12);
+        0 22px 70px rgba(0,40,120,.12);
 
     --glass-shadow-hover:
-
         0 30px 80px rgba(0,40,120,.18);
 
-    --glass-blur: 40px;
+    --glass-blur:40px;
 
 
-    /* ==========================================
+    /* ==================================================
+       BACKGROUND
+    ================================================== */
+
+    --gradient-background:
+        linear-gradient(
+            180deg,
+            #d5f3ff 0%,
+            #c4e9ff 45%,
+            #b4ddff 100%
+        );
+
+
+    /* ==================================================
+       BLOBS
+    ================================================== */
+
+    --blob-1:rgba(0,220,255,.30);
+    --blob-2:rgba(30,95,255,.28);
+    --blob-3:rgba(0,255,210,.22);
+
+    --blob-dark-1:rgba(10,45,130,.25);
+    --blob-dark-2:rgba(0,70,170,.18);
+    --blob-dark-3:rgba(0,110,210,.15);
+
+    --noise-opacity:.025;
+
+    --wave-opacity:.05;
+
+
+    /* ==================================================
        GRADIENTS
-    ========================================== */
+    ================================================== */
 
     --gradient-primary:
-
         linear-gradient(
             135deg,
-            #00d9ff 0%,
-            #3d8cff 100%
+            #00d9ff,
+            #3c8dff
         );
 
     --gradient-accent:
-
         linear-gradient(
             135deg,
             #00ffd0,
             #00d9ff
         );
 
-   --gradient-background:
-    linear-gradient(
-        180deg,
-        #eefcff,
-        #dff7ff,
-        #cfefff
-    );
 
-
-    /* ==========================================
+    /* ==================================================
        GLOW
-    ========================================== */
+    ================================================== */
 
     --glow-primary:
-
-        0 0 24px rgba(0,220,255,.18);
+        0 0 28px rgba(0,220,255,.22);
 
     --glow-strong:
+        0 0 60px rgba(0,220,255,.35);
 
-        0 0 50px rgba(0,220,255,.30);
 
-
-    /* ==========================================
+    /* ==================================================
        TYPOGRAPHY
-    ========================================== */
+    ================================================== */
 
     --font-family:
-
         "Inter",
         "SF Pro Display",
         "Segoe UI",
         sans-serif;
 
-    --font-size-xs: .75rem;
-    --font-size-sm: .875rem;
-    --font-size-md: 1rem;
-    --font-size-lg: 1.125rem;
-    --font-size-xl: 2rem;
-
     --font-size-hero:
+        clamp(2.8rem,6vw,4.6rem);
 
-        clamp(2.8rem, 6vw, 4.5rem);
+    --font-size-xl:2rem;
+    --font-size-lg:1.2rem;
+    --font-size-md:1rem;
+    --font-size-sm:.9rem;
+    --font-size-xs:.75rem;
 
 
-    /* ==========================================
+    /* ==================================================
        SPACING
-    ========================================== */
+    ================================================== */
 
-    --space-xs: .5rem;
-    --space-sm: .75rem;
-    --space-md: 1rem;
-    --space-lg: 2rem;
-    --space-xl: 4rem;
-    --space-xxl: 6rem;
-
-
-    /* ==========================================
-       BORDER RADIUS
-    ========================================== */
-
-    --radius-sm: 12px;
-    --radius-md: 18px;
-    --radius-lg: 30px;
-    --radius-xl: 42px;
-
-    --radius-pill: 999px;
+    --space-xs:.5rem;
+    --space-sm:.75rem;
+    --space-md:1rem;
+    --space-lg:2rem;
+    --space-xl:4rem;
 
 
-    /* ==========================================
+    /* ==================================================
+       RADIUS
+    ================================================== */
+
+    --radius-sm:12px;
+    --radius-md:18px;
+    --radius-lg:30px;
+    --radius-xl:42px;
+
+    --radius-pill:999px;
+
+
+    /* ==================================================
        TRANSITIONS
-    ========================================== */
+    ================================================== */
 
-    --transition-fast: .2s ease;
+    --transition-fast:.2s ease;
 
-    --transition-normal: .35s cubic-bezier(.2,.8,.2,1);
+    --transition-normal:
+        .35s cubic-bezier(.2,.8,.2,1);
 
-    --transition-slow: .6s cubic-bezier(.2,.8,.2,1);
-
-
-    /* ==========================================
-       Z-INDEX
-    ========================================== */
-
-    --z-background: -10;
-    --z-content: 1;
-    --z-navbar: 1000;
-    --z-modal: 5000;
+    --transition-slow:
+        .6s cubic-bezier(.2,.8,.2,1);
 
 }
+
 
 /* ==================================================
    DARK THEME
 ================================================== */
 
-[data-theme="dark"] {
+[data-theme="dark"]{
 
-    --bg-main: #07131d;
-    --bg-secondary: #0c1d2c;
-    --bg-tertiary: #10283d;
+    --bg-main:#07131d;
+    --bg-secondary:#0b1c2b;
+    --bg-tertiary:#12283b;
 
-    --bg-card: rgba(16,28,45,.45);
+    --text-primary:#f4fbff;
+    --text-secondary:#b3c7d8;
+    --text-muted:#8196a8;
 
-    --text-primary: #f5fbff;
-    --text-secondary: #b4c7d6;
-    --text-muted: #8da3b5;
+    --border-color:rgba(255,255,255,.08);
 
-    --glass-bg: rgba(20,35,55,.35);
-    --glass-border: rgba(255,255,255,.08);
-
-    --glass-shadow:
-        0 24px 60px rgba(0,0,0,.45);
-
-    --border-color: rgba(255,255,255,.08);
-
-    --gradient-background:
-        linear-gradient(
-            180deg,
-            #07131d 0%,
-            #0c1d2c 50%,
-            #132d44 100%
-        );
-
-}
-
-/* ==================================================
-   DARK THEME
-================================================== */
-
-[data-theme="dark"] {
-
-    --bg-main:#06111a;
-    --bg-secondary:#0b1a27;
-    --bg-tertiary:#102436;
-
-    --text-primary:#eefcff;
-    --text-secondary:#a9bfd2;
-    --text-muted:#7f96a8;
-
-    --bg-card:rgba(18,30,46,.35);
-
-    --glass-bg:rgba(18,28,45,.28);
+    --glass-bg:rgba(15,28,46,.28);
 
     --glass-border:rgba(255,255,255,.08);
 
     --glass-shadow:
-        0 24px 60px rgba(0,0,0,.45);
+        0 25px 80px rgba(0,0,0,.50);
 
---gradient-background:
-    linear-gradient(
-        180deg,
-        #dff7ff 0%,
-        #c8edff 45%,
-        #b9e4ff 100%
-    );
+    --glass-shadow-hover:
+        0 35px 90px rgba(0,0,0,.60);
+
+    --gradient-background:
+        linear-gradient(
+            180deg,
+            #06111a 0%,
+            #0b1a28 45%,
+            #133654 100%
+        );
 
     --blob-1:rgba(0,170,255,.14);
+    --blob-2:rgba(0,95,255,.18);
+    --blob-3:rgba(0,255,210,.10);
 
-    --blob-2:rgba(0,90,255,.16);
-
-    --blob-3:rgba(0,255,200,.10);
-
-    --blob-dark-1:rgba(0,0,0,.22);
-
-    --blob-dark-2:rgba(0,40,120,.18);
-
-    --blob-dark-3:rgba(0,90,170,.14);
+    --blob-dark-1:rgba(0,0,0,.28);
+    --blob-dark-2:rgba(0,40,120,.20);
+    --blob-dark-3:rgba(0,90,170,.16);
 
     --noise-opacity:.04;
 
-    --wave-opacity:.07;
+    --wave-opacity:.08;
 
 }
+
 
 /* ==================================================
    COLOR SCHEME
 ================================================== */
 
-:root {
+:root{
 
-    color-scheme: light;
+    color-scheme:light;
 
 }
 
-[data-theme="dark"] {
+[data-theme="dark"]{
 
-    color-scheme: dark;
+    color-scheme:dark;
 
 }
