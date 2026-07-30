@@ -4,7 +4,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const switch = document.getElementById("language-switch");
+    const switcher = document.getElementById("language-switch");
 
     if (!switch) return;
 
