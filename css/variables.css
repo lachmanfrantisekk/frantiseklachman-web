@@ -1,26 +1,26 @@
 /* ==================================================
-   ROOT VARIABLES 
+   ROOT VARIABLES
    Frantisek Lachman Portfolio
 ================================================== */
 
 :root {
 
     /* ==========================================
-       COLORS
+       BRAND COLORS
     ========================================== */
 
-    --color-primary: #16d9ff;
-    --color-primary-light: #73f0ff;
-    --color-primary-dark: #0ba4d6;
+    --color-primary: #00d9ff;
+    --color-primary-light: #7af4ff;
+    --color-primary-dark: #0a92d1;
 
-    --color-secondary: #4ea8ff;
+    --color-secondary: #4f8fff;
+    --color-accent: #00ffd0;
 
-    --color-accent: #00ffd5;
-
-    --color-success: #00d68f;
+    --color-success: #00d66f;
+    --color-warning: #ffb84d;
+    --color-danger: #ff5f7d;
 
     --color-white: #ffffff;
-
     --color-black: #000000;
 
 
@@ -28,31 +28,38 @@
        LIGHT THEME
     ========================================== */
 
-    --bg-main: #f4fdff;
+    --bg-main: #eefcff;
+    --bg-secondary: #def8ff;
+    --bg-tertiary: #f8feff;
 
-    --bg-secondary: #ebf9ff;
+    --bg-card: rgba(255,255,255,.12);
 
-    --bg-card: rgba(255,255,255,.45);
+    --text-primary: #10273b;
+    --text-secondary: #4f6677;
+    --text-muted: #7f96a8;
 
-    --text-primary: #0b2233;
-
-    --text-secondary: #476579;
-
-    --border-color: rgba(255,255,255,.55);
+    --border-color: rgba(255,255,255,.25);
 
 
     /* ==========================================
        GLASS
     ========================================== */
 
-    --glass-bg: rgba(255,255,255,.35);
+    --glass-bg: rgba(255,255,255,.10);
 
-    --glass-border: rgba(255,255,255,.40);
+    --glass-border: rgba(255,255,255,.25);
+
+    --glass-highlight: rgba(255,255,255,.45);
 
     --glass-shadow:
-        0 10px 35px rgba(0,0,0,.08);
 
-    --glass-blur: 24px;
+        0 20px 60px rgba(0,40,120,.12);
+
+    --glass-shadow-hover:
+
+        0 30px 80px rgba(0,40,120,.18);
+
+    --glass-blur: 40px;
 
 
     /* ==========================================
@@ -60,26 +67,28 @@
     ========================================== */
 
     --gradient-primary:
+
         linear-gradient(
             135deg,
-            #8df8ff,
-            #37c8ff,
-            #4f7cff
+            #00d9ff 0%,
+            #3d8cff 100%
+        );
+
+    --gradient-accent:
+
+        linear-gradient(
+            135deg,
+            #00ffd0,
+            #00d9ff
         );
 
     --gradient-background:
-        radial-gradient(circle at top left,
-            #d8ffff,
-            transparent 45%),
-
-        radial-gradient(circle at bottom right,
-            #9ce9ff,
-            transparent 45%),
 
         linear-gradient(
-            135deg,
-            #f9feff,
-            #ebfbff
+            180deg,
+            #eefcff 0%,
+            #def8ff 45%,
+            #f8feff 100%
         );
 
 
@@ -88,10 +97,12 @@
     ========================================== */
 
     --glow-primary:
-        0 0 18px rgba(22,217,255,.35);
+
+        0 0 24px rgba(0,220,255,.18);
 
     --glow-strong:
-        0 0 40px rgba(22,217,255,.50);
+
+        0 0 50px rgba(0,220,255,.30);
 
 
     /* ==========================================
@@ -99,21 +110,21 @@
     ========================================== */
 
     --font-family:
+
         "Inter",
         "SF Pro Display",
+        "Segoe UI",
         sans-serif;
 
     --font-size-xs: .75rem;
-
-    --font-size-sm: .9rem;
-
+    --font-size-sm: .875rem;
     --font-size-md: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 2rem;
 
-    --font-size-lg: 1.2rem;
+    --font-size-hero:
 
-    --font-size-xl: 2.4rem;
-
-   --font-size-hero: clamp(2.6rem, 5vw, 4.5rem);
+        clamp(2.8rem, 6vw, 4.5rem);
 
 
     /* ==========================================
@@ -121,26 +132,20 @@
     ========================================== */
 
     --space-xs: .5rem;
-
     --space-sm: .75rem;
-
     --space-md: 1rem;
-
     --space-lg: 2rem;
-
     --space-xl: 4rem;
+    --space-xxl: 6rem;
 
 
     /* ==========================================
-       RADIUS
+       BORDER RADIUS
     ========================================== */
 
     --radius-sm: 12px;
-
     --radius-md: 18px;
-
     --radius-lg: 30px;
-
     --radius-xl: 42px;
 
     --radius-pill: 999px;
@@ -152,8 +157,18 @@
 
     --transition-fast: .2s ease;
 
-    --transition-normal: .35s ease;
+    --transition-normal: .35s cubic-bezier(.2,.8,.2,1);
 
-    --transition-slow: .6s ease;
+    --transition-slow: .6s cubic-bezier(.2,.8,.2,1);
+
+
+    /* ==========================================
+       Z-INDEX
+    ========================================== */
+
+    --z-background: -10;
+    --z-content: 1;
+    --z-navbar: 1000;
+    --z-modal: 5000;
 
 }
