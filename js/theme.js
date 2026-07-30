@@ -16,8 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     applyTheme(savedTheme);
 
-   document.documentElement.setAttribute("data-theme", theme);
-
     buttons.forEach((button, index) => {
 
         button.addEventListener("click", () => {
@@ -45,23 +43,21 @@ function applyTheme(theme) {
 
     buttons.forEach(btn => btn.classList.remove("active"));
 
-    if (theme === "dark") {
+   document.documentElement.setAttribute("data-theme", theme);
 
-        document.documentElement.setAttribute("data-theme", "dark");
+if (theme === "dark") {
 
-        switcher.classList.add("dark");
+    switcher.classList.add("dark");
 
-        buttons[1].classList.add("active");
+    buttons[1].classList.add("active");
 
-    } else {
+} else {
 
-        document.documentElement.removeAttribute("data-theme");
+    switcher.classList.remove("dark");
 
-        switcher.classList.remove("dark");
+    buttons[0].classList.add("active");
 
-        buttons[0].classList.add("active");
-
-    }
+}
 
     localStorage.setItem("theme", theme);
 
