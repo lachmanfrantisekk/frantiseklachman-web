@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         button.addEventListener("click", () => {
 
+           console.log(index);
+
             // Odebere active oběma tlačítkům
             buttons.forEach(btn => btn.classList.remove("active"));
 
