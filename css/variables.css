@@ -99,14 +99,13 @@
             #00d9ff
         );
 
-    --gradient-background:
-
-        linear-gradient(
-            180deg,
-            #eefcff 0%,
-            #def8ff 45%,
-            #f8feff 100%
-        );
+   --gradient-background:
+    linear-gradient(
+        180deg,
+        #eefcff,
+        #dff7ff,
+        #cfefff
+    );
 
 
     /* ==========================================
