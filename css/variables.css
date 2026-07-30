@@ -113,7 +113,7 @@
 
     --font-size-xl: 2.4rem;
 
-    --font-size-hero: clamp(2.8rem, 6vw, 5rem);
+   --font-size-hero: clamp(2.6rem, 5vw, 4.5rem);
 
 
     /* ==========================================
