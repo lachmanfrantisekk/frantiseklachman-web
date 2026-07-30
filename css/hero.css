@@ -1,0 +1,339 @@
+/* ==================================================
+   HERO SECTION
+================================================== */
+
+.hero {
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    padding: 2rem;
+
+}
+
+
+/* ==================================================
+   HERO BACKGROUND
+================================================== */
+
+.hero-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+}
+
+
+/* ==================================================
+   BLOBS
+================================================== */
+
+.blob {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(90px);
+
+    opacity: .45;
+
+}
+
+.blob-1 {
+
+    width: 500px;
+    height: 500px;
+
+    top: -120px;
+    left: -120px;
+
+    background: #00d9ff;
+
+}
+
+.blob-2 {
+
+    width: 600px;
+    height: 600px;
+
+    right: -180px;
+    top: 15%;
+
+    background: #5d8cff;
+
+}
+
+.blob-3 {
+
+    width: 450px;
+    height: 450px;
+
+    bottom: -150px;
+    left: 35%;
+
+    background: #00ffd0;
+
+}
+
+
+/* ==================================================
+   GRID
+================================================== */
+
+.grid-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: .08;
+
+    background-image:
+
+        linear-gradient(rgba(0,0,0,.08) 1px, transparent 1px),
+
+        linear-gradient(90deg, rgba(0,0,0,.08) 1px, transparent 1px);
+
+    background-size: 60px 60px;
+
+}
+
+
+/* ==================================================
+   NOISE
+================================================== */
+
+.noise {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: .025;
+
+    background-image:
+
+        radial-gradient(circle, #000 1px, transparent 1px);
+
+    background-size: 18px 18px;
+
+}
+
+
+/* ==================================================
+   HERO CARD
+================================================== */
+
+.hero-card {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(720px, 92vw);
+
+    padding: 3.5rem;
+
+    text-align: center;
+
+}
+
+
+/* ==================================================
+   STATUS
+================================================== */
+
+.hero-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: .6rem;
+
+    margin-bottom: 1.8rem;
+
+    padding: .45rem .9rem;
+
+    border-radius: 999px;
+
+    background: rgba(255,255,255,.18);
+
+    border: 1px solid rgba(255,255,255,.35);
+
+    font-size: .9rem;
+
+    color: var(--text-secondary);
+
+}
+
+
+/* LED */
+
+.status-dot {
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: #00d66f;
+
+    box-shadow:
+
+        0 0 12px #00d66f;
+
+}
+
+
+/* ==================================================
+   TEXT
+================================================== */
+
+.hero h1 {
+
+    font-size: var(--font-size-hero);
+
+    font-weight: 800;
+
+    margin-bottom: 1rem;
+
+    line-height: 1;
+
+}
+
+.hero h2 {
+
+    font-size: 1.4rem;
+
+    font-weight: 600;
+
+    color: var(--color-primary-dark);
+
+    margin-bottom: 1.4rem;
+
+}
+
+.hero p {
+
+    max-width: 620px;
+
+    margin: 0 auto 2.5rem;
+
+    font-size: 1.08rem;
+
+    color: var(--text-secondary);
+
+}
+
+
+/* ==================================================
+   BUTTONS
+================================================== */
+
+.hero-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 1rem;
+
+    flex-wrap: wrap;
+
+}
+
+
+/* ==================================================
+   SOCIAL
+================================================== */
+
+.hero-social {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 1.5rem;
+
+    margin-top: 2.5rem;
+
+}
+
+.hero-social a {
+
+    color: var(--text-secondary);
+
+    transition: .3s;
+
+}
+
+.hero-social a:hover {
+
+    color: var(--color-primary);
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 768px) {
+
+    .hero {
+
+        padding: 1rem;
+
+    }
+
+    .hero-card {
+
+        padding: 2rem;
+
+    }
+
+    .hero h1 {
+
+        font-size: 2.5rem;
+
+    }
+
+    .hero h2 {
+
+        font-size: 1.1rem;
+
+    }
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+    .hero-buttons .btn {
+
+        width: 100%;
+
+    }
+
+}
