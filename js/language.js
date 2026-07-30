@@ -33,6 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
             }
 
+           const language = index === 0 ? "cz" : "en";
+
+applyLanguage(language);
+
         });
 
     });
@@ -74,3 +78,23 @@ const translations = {
     }
 
 };
+
+/* ==================================================
+   APPLY LANGUAGE
+================================================== */
+
+function applyLanguage(language) {
+
+    document.querySelectorAll("[data-lang]").forEach(element => {
+
+        const key = element.dataset.lang;
+
+        if (translations[language][key]) {
+
+            element.textContent = translations[language][key];
+
+        }
+
+    });
+
+}
