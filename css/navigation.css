@@ -1,18 +1,18 @@
 /* ==================================================
-   NAVIGATION  
+   HEADER
 ================================================== */
 
 header {
 
     position: fixed;
 
-    top: 24px;
+    top: 22px;
 
     left: 50%;
 
     transform: translateX(-50%);
 
-    z-index: 999;
+    z-index: 1000;
 
 }
 
@@ -31,23 +31,27 @@ header {
 
     gap: 2rem;
 
-    min-width: 420px;
+    min-width: 440px;
 
-    padding: .85rem 1.3rem;
+    padding: .8rem 1.3rem;
 
-    background: var(--glass-bg);
+    border-radius: 999px;
 
-    backdrop-filter: blur(var(--glass-blur));
+    background: rgba(255,255,255,.12);
 
-    -webkit-backdrop-filter: blur(var(--glass-blur));
+    backdrop-filter: blur(30px) saturate(180%);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
 
-    border: 1px solid var(--glass-border);
+    border: 1px solid rgba(255,255,255,.25);
 
-    border-radius: var(--radius-pill);
+    box-shadow:
+        inset 0 1px 1px rgba(255,255,255,.45),
+        0 15px 45px rgba(0,40,120,.12);
 
-    box-shadow: var(--glass-shadow);
-
-    transition: all .35s ease;
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        background .35s ease;
 
 }
 
@@ -56,8 +60,10 @@ header {
     transform: translateY(-2px);
 
     box-shadow:
-        var(--glass-shadow),
-        var(--glow-primary);
+
+        inset 0 1px 1px rgba(255,255,255,.5),
+
+        0 20px 55px rgba(0,40,120,.16);
 
 }
 
@@ -72,15 +78,17 @@ header {
 
     font-weight: 700;
 
-    letter-spacing: .12em;
+    letter-spacing: .18em;
 
     color: var(--color-primary-dark);
+
+    user-select: none;
 
 }
 
 
 /* ==================================================
-   RIGHT SIDE
+   CONTROLS
 ================================================== */
 
 .nav-controls {
@@ -100,97 +108,97 @@ header {
 
 .segmented {
 
+    position: relative;
+
     display: flex;
 
     align-items: center;
 
     padding: 4px;
 
-    background: rgba(255,255,255,.18);
-
-    border: 1px solid rgba(255,255,255,.35);
+    min-width: 82px;
 
     border-radius: 999px;
 
-    backdrop-filter: blur(18px);
+    overflow: hidden;
+
+    background: rgba(255,255,255,.10);
+
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
+    border: 1px solid rgba(255,255,255,.20);
 
 }
 
-.segmented{
 
-    position: relative;
+/* ==================================================
+   SLIDER
+================================================== */
 
-    display:flex;
+.segmented .slider {
 
-    align-items:center;
+    position: absolute;
 
-    padding:4px;
+    top: 4px;
 
-    border-radius:999px;
+    left: 4px;
 
-    overflow:hidden;
+    width: calc(50% - 4px);
 
-}
+    height: calc(100% - 8px);
 
-.segmented .slider{
+    border-radius: 999px;
 
-    position:absolute;
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,.55),
+        rgba(255,255,255,.20)
+    );
 
-    left:4px;
-
-    top:4px;
-
-    width:calc(50% - 4px);
-
-    height:calc(100% - 8px);
-
-    border-radius:999px;
-
-    background:rgba(255,255,255,.55);
-
-    backdrop-filter:blur(20px);
+    backdrop-filter: blur(24px);
 
     box-shadow:
 
         inset 0 1px 1px rgba(255,255,255,.7),
 
-        0 6px 16px rgba(0,0,0,.08);
+        0 8px 18px rgba(0,40,120,.12);
 
     transition:
-
         transform .35s cubic-bezier(.2,.8,.2,1);
 
 }
 
-.segmented button{
 
-    position:relative;
-
-    z-index:2;
-
-    flex:1;
-
-    padding:.55rem 1rem;
-
-    background:none;
-
-}
+/* ==================================================
+   BUTTONS
+================================================== */
 
 .segmented button {
 
     position: relative;
 
-    padding: .45rem .9rem;
+    z-index: 2;
 
-    border-radius: 999px;
+    flex: 1;
+
+    padding: .55rem .95rem;
+
+    border: none;
+
+    background: transparent;
 
     color: var(--text-secondary);
 
-    font-size: .9rem;
+    font-size: .88rem;
 
     font-weight: 600;
 
-    transition: all .30s ease;
+    cursor: pointer;
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
 
 }
 
@@ -200,20 +208,15 @@ header {
 
 }
 
-
-/* aktivní tlačítko */
-
 .segmented button.active {
-
-    background: rgba(255,255,255,.55);
 
     color: var(--text-primary);
 
-    box-shadow:
+}
 
-        inset 0 1px 1px rgba(255,255,255,.8),
+.segmented button:active {
 
-        0 4px 12px rgba(0,0,0,.08);
+    transform: scale(.96);
 
 }
 
@@ -222,9 +225,11 @@ header {
    MOBILE
 ================================================== */
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
 
     header {
+
+        top: 16px;
 
         width: 100%;
 
@@ -236,7 +241,39 @@ header {
 
         width: 100%;
 
-        min-width: unset;
+        min-width: 0;
+
+        gap: 1rem;
+
+        padding: .75rem 1rem;
+
+    }
+
+    .logo {
+
+        font-size: 1rem;
+
+        letter-spacing: .12em;
+
+    }
+
+    .nav-controls {
+
+        gap: .5rem;
+
+    }
+
+    .segmented {
+
+        min-width: 74px;
+
+    }
+
+    .segmented button {
+
+        padding: .5rem .75rem;
+
+        font-size: .82rem;
 
     }
 
