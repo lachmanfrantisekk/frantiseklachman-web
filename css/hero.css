@@ -147,9 +147,10 @@
 
     z-index: 2;
 
-    width: min(720px, 92vw);
+    width: min(650px, 90vw);
 
-    padding: 3.5rem;
+    padding: 2.8rem;
+
 
     text-align: center;
 
