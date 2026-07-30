@@ -68,3 +68,43 @@
         0 0 30px rgba(22,217,255,.15);
 
 }
+
+.glass-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-100%;
+
+    left:-40%;
+
+    width:30%;
+
+    height:300%;
+
+    background:
+
+        linear-gradient(
+
+            rgba(255,255,255,0),
+
+            rgba(255,255,255,.25),
+
+            rgba(255,255,255,0)
+
+        );
+
+    transform:rotate(18deg);
+
+    opacity:0;
+
+}
+
+.glass-card:hover::after{
+
+    opacity:1;
+
+    animation:shine 1.3s linear;
+
+}
