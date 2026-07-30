@@ -172,3 +172,37 @@
     --z-modal: 5000;
 
 }
+
+/* ==================================================
+   DARK THEME
+================================================== */
+
+[data-theme="dark"] {
+
+    --bg-main: #07131d;
+    --bg-secondary: #0c1d2c;
+    --bg-tertiary: #10283d;
+
+    --bg-card: rgba(16,28,45,.45);
+
+    --text-primary: #f5fbff;
+    --text-secondary: #b4c7d6;
+    --text-muted: #8da3b5;
+
+    --glass-bg: rgba(20,35,55,.35);
+    --glass-border: rgba(255,255,255,.08);
+
+    --glass-shadow:
+        0 24px 60px rgba(0,0,0,.45);
+
+    --border-color: rgba(255,255,255,.08);
+
+    --gradient-background:
+        linear-gradient(
+            180deg,
+            #07131d 0%,
+            #0c1d2c 50%,
+            #132d44 100%
+        );
+
+}
