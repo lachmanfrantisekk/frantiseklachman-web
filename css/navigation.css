@@ -1,1 +1,183 @@
+/* ==================================================
+   NAVIGATION
+================================================== */
 
+header {
+
+    position: fixed;
+
+    top: 24px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 999;
+
+}
+
+
+/* ==================================================
+   NAVBAR
+================================================== */
+
+.navbar {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    min-width: 420px;
+
+    padding: .85rem 1.3rem;
+
+    background: var(--glass-bg);
+
+    backdrop-filter: blur(var(--glass-blur));
+
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+
+    border: 1px solid var(--glass-border);
+
+    border-radius: var(--radius-pill);
+
+    box-shadow: var(--glass-shadow);
+
+    transition: all .35s ease;
+
+}
+
+.navbar:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        var(--glass-shadow),
+        var(--glow-primary);
+
+}
+
+
+/* ==================================================
+   LOGO
+================================================== */
+
+.logo {
+
+    font-size: 1.15rem;
+
+    font-weight: 700;
+
+    letter-spacing: .12em;
+
+    color: var(--color-primary-dark);
+
+}
+
+
+/* ==================================================
+   RIGHT SIDE
+================================================== */
+
+.nav-controls {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: .8rem;
+
+}
+
+
+/* ==================================================
+   SEGMENTED CONTROL
+================================================== */
+
+.segmented {
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 4px;
+
+    background: rgba(255,255,255,.18);
+
+    border: 1px solid rgba(255,255,255,.35);
+
+    border-radius: 999px;
+
+    backdrop-filter: blur(18px);
+
+}
+
+.segmented button {
+
+    position: relative;
+
+    padding: .45rem .9rem;
+
+    border-radius: 999px;
+
+    color: var(--text-secondary);
+
+    font-size: .9rem;
+
+    font-weight: 600;
+
+    transition: all .30s ease;
+
+}
+
+.segmented button:hover {
+
+    color: var(--text-primary);
+
+}
+
+
+/* aktivní tlačítko */
+
+.segmented button.active {
+
+    background: rgba(255,255,255,.55);
+
+    color: var(--text-primary);
+
+    box-shadow:
+
+        inset 0 1px 1px rgba(255,255,255,.8),
+
+        0 4px 12px rgba(0,0,0,.08);
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 640px) {
+
+    header {
+
+        width: 100%;
+
+        padding: 0 1rem;
+
+    }
+
+    .navbar {
+
+        width: 100%;
+
+        min-width: unset;
+
+    }
+
+}
