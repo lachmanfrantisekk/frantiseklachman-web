@@ -1,0 +1,159 @@
+/* ==================================================
+   ROOT VARIABLES
+   Frantisek Lachman Portfolio
+================================================== */
+
+:root {
+
+    /* ==========================================
+       COLORS
+    ========================================== */
+
+    --color-primary: #16d9ff;
+    --color-primary-light: #73f0ff;
+    --color-primary-dark: #0ba4d6;
+
+    --color-secondary: #4ea8ff;
+
+    --color-accent: #00ffd5;
+
+    --color-success: #00d68f;
+
+    --color-white: #ffffff;
+
+    --color-black: #000000;
+
+
+    /* ==========================================
+       LIGHT THEME
+    ========================================== */
+
+    --bg-main: #f4fdff;
+
+    --bg-secondary: #ebf9ff;
+
+    --bg-card: rgba(255,255,255,.45);
+
+    --text-primary: #0b2233;
+
+    --text-secondary: #476579;
+
+    --border-color: rgba(255,255,255,.55);
+
+
+    /* ==========================================
+       GLASS
+    ========================================== */
+
+    --glass-bg: rgba(255,255,255,.35);
+
+    --glass-border: rgba(255,255,255,.40);
+
+    --glass-shadow:
+        0 10px 35px rgba(0,0,0,.08);
+
+    --glass-blur: 24px;
+
+
+    /* ==========================================
+       GRADIENTS
+    ========================================== */
+
+    --gradient-primary:
+        linear-gradient(
+            135deg,
+            #8df8ff,
+            #37c8ff,
+            #4f7cff
+        );
+
+    --gradient-background:
+        radial-gradient(circle at top left,
+            #d8ffff,
+            transparent 45%),
+
+        radial-gradient(circle at bottom right,
+            #9ce9ff,
+            transparent 45%),
+
+        linear-gradient(
+            135deg,
+            #f9feff,
+            #ebfbff
+        );
+
+
+    /* ==========================================
+       GLOW
+    ========================================== */
+
+    --glow-primary:
+        0 0 18px rgba(22,217,255,.35);
+
+    --glow-strong:
+        0 0 40px rgba(22,217,255,.50);
+
+
+    /* ==========================================
+       TYPOGRAPHY
+    ========================================== */
+
+    --font-family:
+        "Inter",
+        "SF Pro Display",
+        sans-serif;
+
+    --font-size-xs: .75rem;
+
+    --font-size-sm: .9rem;
+
+    --font-size-md: 1rem;
+
+    --font-size-lg: 1.2rem;
+
+    --font-size-xl: 2.4rem;
+
+    --font-size-hero: clamp(2.8rem, 6vw, 5rem);
+
+
+    /* ==========================================
+       SPACING
+    ========================================== */
+
+    --space-xs: .5rem;
+
+    --space-sm: .75rem;
+
+    --space-md: 1rem;
+
+    --space-lg: 2rem;
+
+    --space-xl: 4rem;
+
+
+    /* ==========================================
+       RADIUS
+    ========================================== */
+
+    --radius-sm: 12px;
+
+    --radius-md: 18px;
+
+    --radius-lg: 30px;
+
+    --radius-xl: 42px;
+
+    --radius-pill: 999px;
+
+
+    /* ==========================================
+       TRANSITIONS
+    ========================================== */
+
+    --transition-fast: .2s ease;
+
+    --transition-normal: .35s ease;
+
+    --transition-slow: .6s ease;
+
+}
