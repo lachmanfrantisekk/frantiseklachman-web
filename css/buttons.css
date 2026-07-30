@@ -1,1 +1,59 @@
+/* ==================================================
+   BUTTONS
+================================================== */
 
+.btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: .5rem;
+
+    padding: .9rem 1.6rem;
+
+    border-radius: 999px;
+
+    font-weight: 600;
+
+    transition: all .35s ease;
+
+}
+
+/* primární */
+
+.btn-primary {
+
+    background: var(--gradient-primary);
+
+    color: white;
+
+    box-shadow: var(--glow-primary);
+
+}
+
+.btn-primary:hover {
+
+    transform: translateY(-3px);
+
+}
+
+/* secondary */
+
+.btn-glass {
+
+    background: rgba(255,255,255,.18);
+
+    border: 1px solid rgba(255,255,255,.4);
+
+    backdrop-filter: blur(18px);
+
+}
+
+.btn-glass:hover {
+
+    background: rgba(255,255,255,.35);
+
+}
