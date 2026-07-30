@@ -40,6 +40,23 @@
 
     --border-color: rgba(255,255,255,.25);
 
+   
+/* ==================================================
+   BACKGROUND BLOBS
+================================================== */
+
+--blob-1: rgba(0,220,255,.22);
+--blob-2: rgba(35,110,255,.18);
+--blob-3: rgba(0,255,208,.18);
+
+--blob-dark-1: rgba(8,35,110,.22);
+--blob-dark-2: rgba(5,60,150,.16);
+--blob-dark-3: rgba(0,90,170,.14);
+
+--noise-opacity: .025;
+
+--wave-opacity: .05;
+
 
     /* ==========================================
        GLASS
@@ -204,5 +221,54 @@
             #0c1d2c 50%,
             #132d44 100%
         );
+
+}
+
+/* ==================================================
+   DARK THEME
+================================================== */
+
+[data-theme="dark"] {
+
+    --bg-main:#06111a;
+    --bg-secondary:#0b1a27;
+    --bg-tertiary:#102436;
+
+    --text-primary:#eefcff;
+    --text-secondary:#a9bfd2;
+    --text-muted:#7f96a8;
+
+    --bg-card:rgba(18,30,46,.35);
+
+    --glass-bg:rgba(18,28,45,.28);
+
+    --glass-border:rgba(255,255,255,.08);
+
+    --glass-shadow:
+        0 24px 60px rgba(0,0,0,.45);
+
+    --gradient-background:
+        linear-gradient(
+            180deg,
+            #06111a,
+            #0b1a27,
+            #132f47
+        );
+
+    --blob-1:rgba(0,170,255,.14);
+
+    --blob-2:rgba(0,90,255,.16);
+
+    --blob-3:rgba(0,255,200,.10);
+
+    --blob-dark-1:rgba(0,0,0,.22);
+
+    --blob-dark-2:rgba(0,40,120,.18);
+
+    --blob-dark-3:rgba(0,90,170,.14);
+
+    --noise-opacity:.04;
+
+    --wave-opacity:.07;
 
 }
