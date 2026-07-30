@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const switcher = document.getElementById("language-switch");
 
-    if (!switch) return;
+    if (!switcher) return;
 
-    const buttons = switch.querySelectorAll("button");
+    const buttons = switcher.querySelectorAll("button");
 
     buttons.forEach((button, index) => {
 
@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
             // Posune slider
             if (index === 1) {
 
-                switch.classList.add("en");
+                switcher.classList.add("en");
 
             } else {
 
-                switch.classList.remove("en");
+                switcher.classList.remove("en");
 
             }
 
