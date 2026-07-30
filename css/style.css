@@ -242,3 +242,44 @@ main {
     color: #ffffff;
 
 }
+
+/* ==================================================
+   GLOBAL THEME TRANSITIONS
+================================================== */
+
+body,
+header,
+.navbar,
+.glass-card,
+.hero-card,
+.btn,
+.segmented,
+.segmented .slider,
+.hero-status,
+.hero h1,
+.hero h2,
+.hero p,
+.hero-social a {
+
+    transition:
+        background .45s cubic-bezier(.2,.8,.2,1),
+        background-color .45s cubic-bezier(.2,.8,.2,1),
+        color .35s cubic-bezier(.2,.8,.2,1),
+        border-color .45s cubic-bezier(.2,.8,.2,1),
+        box-shadow .45s cubic-bezier(.2,.8,.2,1),
+        backdrop-filter .45s cubic-bezier(.2,.8,.2,1);
+
+}
+
+body::before,
+body::after,
+.blob,
+.wave,
+.noise {
+
+    transition:
+        opacity .6s ease,
+        filter .6s ease,
+        background .6s ease;
+
+}
