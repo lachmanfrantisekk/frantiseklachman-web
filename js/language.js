@@ -38,3 +38,39 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+/* ==================================================
+   TRANSLATIONS
+================================================== */
+
+const translations = {
+
+    cz: {
+
+        status: "K dispozici pro nové projekty",
+
+        subtitle: " Web Developer · AI",
+
+        description: "Moderní weby, automatizace, AI řešení a IT služby.",
+
+        portfolio: "Portfolio",
+
+        contact: "Kontakt"
+
+    },
+
+    en: {
+
+        status: "Available for Projects",
+
+        subtitle: " Web Developer · AI",
+
+        description: "Modern websites, automation, AI solutions and IT services.",
+
+        portfolio: "Portfolio",
+
+        contact: "Contact"
+
+    }
+
+};
