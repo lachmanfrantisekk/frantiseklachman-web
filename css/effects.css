@@ -201,3 +201,28 @@ body::after{
     background-size:18px 18px;
 
 }
+
+/* ==================================================
+   LIGHT VIGNETTE
+================================================== */
+
+.page-background::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+        radial-gradient(
+            circle,
+            transparent 45%,
+            rgba(0,40,110,.08) 100%
+        );
+
+    z-index:-1;
+
+}
