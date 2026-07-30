@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     applyTheme(savedTheme);
 
+   document.documentElement.setAttribute("data-theme", theme);
+
     buttons.forEach((button, index) => {
 
         button.addEventListener("click", () => {
