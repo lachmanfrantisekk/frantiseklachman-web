@@ -288,3 +288,11 @@ header {
     transform: translateX(100%);
 
 }
+
+/* Posun slideru na EN */
+
+#language-switch.en .slider {
+
+    transform: translateX(100%);
+
+}
