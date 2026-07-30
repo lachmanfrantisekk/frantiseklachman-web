@@ -1,1 +1,170 @@
+/* ==================================================
+   RESET
+================================================== */
 
+*,
+*::before,
+*::after {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    min-height: 100vh;
+
+    font-family: var(--font-family);
+
+    background: var(--gradient-background);
+
+    color: var(--text-primary);
+
+    overflow-x: hidden;
+
+    transition:
+        background var(--transition-slow),
+        color var(--transition-normal);
+
+}
+
+
+/* ==================================================
+   TYPOGRAPHY
+================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    font-weight: 700;
+    line-height: 1.1;
+
+}
+
+p {
+
+    line-height: 1.7;
+
+}
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+button {
+
+    font: inherit;
+
+    border: none;
+
+    background: none;
+
+    cursor: pointer;
+
+}
+
+
+/* ==================================================
+   IMAGES
+================================================== */
+
+img {
+
+    max-width: 100%;
+
+    display: block;
+
+}
+
+
+/* ==================================================
+   MAIN LAYOUT
+================================================== */
+
+main {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 2rem;
+
+}
+
+
+/* ==================================================
+   BACKGROUND
+================================================== */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+
+        radial-gradient(circle at 15% 20%,
+            rgba(0,255,255,.18),
+            transparent 35%),
+
+        radial-gradient(circle at 80% 30%,
+            rgba(60,180,255,.18),
+            transparent 35%),
+
+        radial-gradient(circle at 50% 90%,
+            rgba(0,200,255,.12),
+            transparent 45%);
+
+    z-index: -2;
+
+}
+
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    backdrop-filter: blur(80px);
+
+    z-index: -1;
+
+}
+
+
+/* ==================================================
+   SELECTION
+================================================== */
+
+::selection {
+
+    background: var(--color-primary);
+
+    color: white;
+
+}
