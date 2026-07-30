@@ -8,13 +8,23 @@
 
     margin: 0;
     padding: 0;
+
     box-sizing: border-box;
 
 }
 
+
+/* ==================================================
+   ROOT
+================================================== */
+
 html {
 
     scroll-behavior: smooth;
+
+    -webkit-font-smoothing: antialiased;
+
+    -moz-osx-font-smoothing: grayscale;
 
 }
 
@@ -22,17 +32,17 @@ body {
 
     min-height: 100vh;
 
-    font-family: var(--font-family);
+    overflow-x: hidden;
 
-    background: var(--gradient-background);
+    position: relative;
+
+    font-family: var(--font-family);
 
     color: var(--text-primary);
 
-    overflow-x: hidden;
-
     transition:
-        background var(--transition-slow),
-        color var(--transition-normal);
+        background .45s ease,
+        color .35s ease;
 
 }
 
@@ -49,15 +59,37 @@ h5,
 h6 {
 
     font-weight: 700;
+
     line-height: 1.1;
+
+    color: var(--text-primary);
 
 }
 
 p {
 
-    line-height: 1.7;
+    line-height: 1.8;
+
+    color: var(--text-secondary);
 
 }
+
+strong {
+
+    font-weight: 700;
+
+}
+
+small {
+
+    font-size: .875rem;
+
+}
+
+
+/* ==================================================
+   LINKS
+================================================== */
 
 a {
 
@@ -65,39 +97,78 @@ a {
 
     text-decoration: none;
 
+    transition: color .3s ease;
+
 }
+
+
+/* ==================================================
+   BUTTON RESET
+================================================== */
 
 button {
 
     font: inherit;
 
-    border: none;
-
     background: none;
+
+    border: none;
 
     cursor: pointer;
 
+    color: inherit;
+
 }
 
 
 /* ==================================================
-   IMAGES
+   MEDIA
 ================================================== */
 
-img {
-
-    max-width: 100%;
+img,
+picture,
+svg,
+video {
 
     display: block;
 
+    max-width: 100%;
+
 }
 
 
 /* ==================================================
-   MAIN LAYOUT
+   LISTS
+================================================== */
+
+ul,
+ol {
+
+    list-style: none;
+
+}
+
+
+/* ==================================================
+   FORM ELEMENTS
+================================================== */
+
+input,
+textarea,
+select {
+
+    font: inherit;
+
+}
+
+
+/* ==================================================
+   MAIN
 ================================================== */
 
 main {
+
+    position: relative;
 
     min-height: 100vh;
 
@@ -113,58 +184,61 @@ main {
 
 
 /* ==================================================
-   BACKGROUND
+   UTILITIES
 ================================================== */
 
-body::before {
+.hidden {
 
-    content: "";
-
-    position: fixed;
-
-    inset: 0;
-
-    background:
-
-        radial-gradient(circle at 15% 20%,
-            rgba(0,255,255,.18),
-            transparent 35%),
-
-        radial-gradient(circle at 80% 30%,
-            rgba(60,180,255,.18),
-            transparent 35%),
-
-        radial-gradient(circle at 50% 90%,
-            rgba(0,200,255,.12),
-            transparent 45%);
-
-    z-index: -2;
+    display: none !important;
 
 }
 
-body::after {
+.text-center {
 
-    content: "";
-
-    position: fixed;
-
-    inset: 0;
-
-    backdrop-filter: blur(80px);
-
-    z-index: -1;
+    text-align: center;
 
 }
 
 
 /* ==================================================
-   SELECTION
+   SCROLLBAR
+================================================== */
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: rgba(255,255,255,.15);
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: rgba(0,170,255,.35);
+
+    border-radius: 999px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: rgba(0,170,255,.55);
+
+}
+
+
+/* ==================================================
+   TEXT SELECTION
 ================================================== */
 
 ::selection {
 
     background: var(--color-primary);
 
-    color: white;
+    color: #ffffff;
 
 }
