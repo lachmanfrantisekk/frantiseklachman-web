@@ -181,3 +181,27 @@
     }
 
 }
+
+@keyframes shine{
+
+    from{
+
+        transform:
+
+            translateX(-250px)
+
+            rotate(18deg);
+
+    }
+
+    to{
+
+        transform:
+
+            translateX(900px)
+
+            rotate(18deg);
+
+    }
+
+}
