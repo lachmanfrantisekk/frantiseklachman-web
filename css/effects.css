@@ -27,34 +27,31 @@ body::before{
 
     background:
 
-        radial-gradient(circle at 15% 15%,
+    radial-gradient(
+        circle at 12% 15%,
+        rgba(0,205,255,.22),
+        transparent 34%
+    ),
 
-            var(--blob-1),
+    radial-gradient(
+        circle at 85% 18%,
+        rgba(45,95,255,.28),
+        transparent 40%
+    ),
 
-            transparent 35%),
+    radial-gradient(
+        circle at 35% 85%,
+        rgba(0,255,220,.18),
+        transparent 35%
+    ),
 
+    radial-gradient(
+        circle at 75% 72%,
+        rgba(8,40,125,.22),
+        transparent 42%
+    );
 
-        radial-gradient(circle at 85% 20%,
-
-            var(--blob-2),
-
-            transparent 40%),
-
-
-        radial-gradient(circle at 35% 85%,
-
-            var(--blob-3),
-
-            transparent 38%),
-
-
-        radial-gradient(circle at 70% 70%,
-
-            var(--blob-dark-1),
-
-            transparent 45%);
-
-}
+   }
 
 
 /* ==================================================
@@ -75,21 +72,25 @@ body::after{
 
     filter:blur(100px);
 
-    background:
+   background:
 
-        radial-gradient(circle at 75% 15%,
+    radial-gradient(
+        circle at 75% 12%,
+        rgba(5,45,140,.18),
+        transparent 28%
+    ),
 
-            var(--blob-dark-2),
+    radial-gradient(
+        circle at 18% 82%,
+        rgba(0,95,180,.14),
+        transparent 32%
+    ),
 
-            transparent 28%),
-
-
-        radial-gradient(circle at 20% 80%,
-
-            var(--blob-dark-3),
-
-            transparent 32%);
-
+    radial-gradient(
+        circle at 55% 45%,
+        rgba(0,70,170,.08),
+        transparent 45%
+    );
 }
 
 
