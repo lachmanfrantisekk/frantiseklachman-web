@@ -2,183 +2,177 @@
    PAGE BACKGROUND
 ================================================== */
 
-body {
+body{
 
-    background: linear-gradient(
-        180deg,
-        #eefcff 0%,
-        #def8ff 45%,
-        #f7fdff 100%
-    );
-
-    overflow-x: hidden;
+    background:var(--gradient-background);
 
 }
 
 
 /* ==================================================
-   BACKGROUND LAYER
+   GLOBAL BLOBS
 ================================================== */
 
-.page-background {
+body::before{
 
-    position: fixed;
+    content:"";
 
-    inset: 0;
+    position:fixed;
 
-    overflow: hidden;
+    inset:0;
 
-    pointer-events: none;
+    pointer-events:none;
 
-    z-index: -10;
-
-}
-
-
-/* ==================================================
-   LIGHT GRADIENT MESH
-================================================== */
-
-.page-background::before {
-
-    content: "";
-
-    position: absolute;
-
-    inset: -15%;
+    z-index:-2;
 
     background:
 
         radial-gradient(circle at 15% 15%,
-            rgba(0,220,255,.22),
-            transparent 32%),
 
-        radial-gradient(circle at 85% 20%,
-            rgba(50,120,255,.22),
-            transparent 34%),
+            var(--blob-1),
 
-        radial-gradient(circle at 45% 80%,
-            rgba(0,255,210,.18),
             transparent 35%),
 
-        radial-gradient(circle at 70% 65%,
-            rgba(70,170,255,.12),
-            transparent 38%);
 
-    filter: blur(90px);
+        radial-gradient(circle at 85% 20%,
+
+            var(--blob-2),
+
+            transparent 40%),
+
+
+        radial-gradient(circle at 35% 85%,
+
+            var(--blob-3),
+
+            transparent 38%),
+
+
+        radial-gradient(circle at 70% 70%,
+
+            var(--blob-dark-1),
+
+            transparent 45%);
 
 }
 
 
 /* ==================================================
-   NAVY DEPTH
+   EXTRA DEPTH
 ================================================== */
 
-.page-background::after {
+body::after{
 
-    content: "";
+    content:"";
 
-    position: absolute;
+    position:fixed;
 
-    inset: -15%;
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+    filter:blur(100px);
 
     background:
 
-        radial-gradient(circle at 80% 10%,
-            rgba(0,45,120,.16),
+        radial-gradient(circle at 75% 15%,
+
+            var(--blob-dark-2),
+
             transparent 28%),
 
-        radial-gradient(circle at 15% 85%,
-            rgba(15,35,95,.13),
-            transparent 32%),
 
-        radial-gradient(circle at 55% 45%,
-            rgba(20,60,150,.08),
-            transparent 40%);
+        radial-gradient(circle at 20% 80%,
 
-    filter: blur(120px);
+            var(--blob-dark-3),
+
+            transparent 32%);
 
 }
 
 
 /* ==================================================
-   BLOBS
+   HERO BLOBS
 ================================================== */
 
-.blob {
+.blob{
 
-    position: absolute;
+    position:absolute;
 
-    border-radius: 50%;
+    border-radius:50%;
 
-    filter: blur(120px);
+    filter:blur(110px);
 
-    opacity: .45;
-
-}
-
-.blob-1 {
-
-    width: 850px;
-    height: 850px;
-
-    top: -260px;
-    left: -260px;
-
-    background: rgba(0,220,255,.18);
+    opacity:.9;
 
 }
 
-.blob-2 {
+.blob-1{
 
-    width: 900px;
-    height: 900px;
+    width:520px;
+    height:520px;
 
-    top: -220px;
-    right: -300px;
+    left:-160px;
+    top:-120px;
 
-    background: rgba(60,120,255,.18);
+    background:var(--blob-1);
 
 }
 
-.blob-3 {
+.blob-2{
 
-    width: 700px;
-    height: 700px;
+    width:620px;
+    height:620px;
 
-    bottom: -220px;
-    left: 25%;
+    right:-180px;
+    top:10%;
 
-    background: rgba(0,255,210,.14);
+    background:var(--blob-2);
+
+}
+
+.blob-3{
+
+    width:480px;
+    height:480px;
+
+    bottom:-160px;
+    left:40%;
+
+    background:var(--blob-3);
 
 }
 
 
 /* ==================================================
-   WAVE TEXTURE
+   WAVES
 ================================================== */
 
-.wave {
+.wave{
 
-    position: absolute;
+    position:fixed;
 
-    inset: 0;
+    inset:0;
 
-    opacity: .035;
+    opacity:var(--wave-opacity);
+
+    pointer-events:none;
 
     background-image:
 
         repeating-radial-gradient(
 
-            circle at 50% 100%,
+            circle at 0% 100%,
 
             transparent 0,
 
-            transparent 28px,
+            transparent 18px,
 
-            rgba(0,120,255,.28) 29px,
+            rgba(255,255,255,.18) 19px,
 
-            transparent 30px
+            transparent 20px
 
         );
 
@@ -189,18 +183,20 @@ body {
    NOISE
 ================================================== */
 
-.noise {
+.noise{
 
-    position: absolute;
+    position:fixed;
 
-    inset: 0;
+    inset:0;
 
-    opacity: .02;
+    pointer-events:none;
+
+    opacity:var(--noise-opacity);
 
     background-image:
 
-        radial-gradient(circle, rgba(0,0,0,.4) 1px, transparent 1px);
+        radial-gradient(circle,#000 1px,transparent 1px);
 
-    background-size: 14px 14px;
+    background-size:18px 18px;
 
 }
