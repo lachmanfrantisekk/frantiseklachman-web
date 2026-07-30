@@ -1,6 +1,6 @@
 /* ==================================================
    MAIN
-   Frantisek Lachman
+   Frantisek Lachman 
 ================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
