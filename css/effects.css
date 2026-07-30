@@ -2,20 +2,23 @@
    BACKGROUND
 ================================================== */
 
-body {
-
-    position: relative;
+body{
 
     background:
 
-        radial-gradient(circle at top left,
-            #dffcff 0%,
-            #d3f7ff 25%,
-            #eafcff 55%,
-            #f7feff 100%);
+        linear-gradient(
+
+            180deg,
+
+            #eefcff 0%,
+
+            #daf8ff 35%,
+
+            #eafcff 100%
+
+        );
 
 }
-
 
 /* ==================================================
    BLOBS
@@ -35,21 +38,40 @@ body::before {
 
     background:
 
-        radial-gradient(circle at 15% 20%,
-            rgba(0,210,255,.18),
-            transparent 30%),
+radial-gradient(
 
-        radial-gradient(circle at 85% 30%,
-            rgba(45,90,220,.15),
-            transparent 32%),
+circle at 15% 15%,
 
-        radial-gradient(circle at 55% 90%,
-            rgba(0,255,220,.12),
-            transparent 30%);
+rgba(0,220,255,.18),
 
-    filter: blur(70px);
+transparent 35%),
 
-}
+
+radial-gradient(
+
+circle at 85% 20%,
+
+rgba(20,80,220,.22),
+
+transparent 38%),
+
+
+radial-gradient(
+
+circle at 40% 85%,
+
+rgba(0,255,220,.14),
+
+transparent 35%),
+
+
+radial-gradient(
+
+circle at 70% 70%,
+
+rgba(10,40,120,.18),
+
+transparent 42%);
 
 body::after{
 
@@ -86,6 +108,41 @@ body::after{
             transparent 30%);
 
 }
+
+   .page-background::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(circle at 20% 80%,
+
+        rgba(8,24,80,.14),
+
+        transparent 30%),
+
+
+        radial-gradient(circle at 90% 40%,
+
+        rgba(0,45,120,.12),
+
+        transparent 35%),
+
+
+        radial-gradient(circle at 60% 10%,
+
+        rgba(15,55,150,.10),
+
+        transparent 40%);
+
+    filter:blur(100px);
+
+}
+   
 
 .wave{
 
