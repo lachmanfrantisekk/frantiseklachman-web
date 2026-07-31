@@ -283,3 +283,62 @@ body::after,
         background .6s ease;
 
 }
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.footer{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+    padding:24px;
+
+    font-size:.9rem;
+
+    color:var(--text-light);
+
+    opacity:.85;
+
+}
+
+.footer a{
+
+    color:var(--accent);
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:color .25s ease,
+               opacity .25s ease;
+
+}
+
+.footer a:hover{
+
+    opacity:.7;
+
+}
+
+@media (max-width:480px){
+
+    .footer{
+
+        font-size:.8rem;
+
+        gap:6px;
+
+        padding:18px;
+
+    }
+
+}
