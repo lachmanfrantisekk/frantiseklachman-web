@@ -382,9 +382,7 @@ body{
 ================================================== */
 
 .fade{
-
-    animation:fade .35s ease;
-
+    animation:fade .45s cubic-bezier(.22,.61,.36,1);
 }
 
 @keyframes fade{
@@ -392,16 +390,14 @@ body{
     from{
 
         opacity:0;
-
-        transform:translateY(16px);
+        transform:translateY(18px) scale(.98);
 
     }
 
     to{
 
         opacity:1;
-
-        transform:none;
+        transform:translateY(0) scale(1);
 
     }
 
