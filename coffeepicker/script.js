@@ -95,6 +95,14 @@ function renderQuestion() {
 
     `;
 
+   questionContainer.classList.remove("fade");
+
+requestAnimationFrame(() => {
+
+    questionContainer.classList.add("fade");
+
+});
+
     bindAnswerButtons();
 
 }
