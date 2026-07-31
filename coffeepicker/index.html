@@ -4,18 +4,15 @@
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Coffee Picker</title>
-
-    <meta name="theme-color" content="#7c3aed">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 
@@ -23,44 +20,36 @@
 
 <body>
 
+    <div class="background">
+
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="blob blob3"></div>
+
+    </div>
+
     <main class="app">
 
-        <header class="top">
+        <div class="card">
 
             <h1>Coffee Picker</h1>
 
-            <p>Najdi ideální kapsli během několika kliknutí.</p>
-
-        </header>
-
-        <section class="progress">
-
-            <div class="step">
-
-                Otázka 1 z 6
-
-            </div>
-
-            <div class="progress-track">
+            <div class="progress">
 
                 <div class="progress-bar"></div>
 
             </div>
 
-        </section>
+            <span class="step"></span>
 
-        <section
-            id="question-container"
-            class="question-container">
+            <div id="question-container"></div>
 
-        </section>
+        </div>
 
     </main>
 
     <script src="coffee-data.js"></script>
-
     <script src="questions.js"></script>
-
     <script src="script.js"></script>
 
 </body>
