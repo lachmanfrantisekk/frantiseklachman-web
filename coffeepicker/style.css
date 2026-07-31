@@ -242,7 +242,8 @@ body{
 
     border-radius:999px;
 
-    transition:width .35s ease;
+       transition:
+        width .45s cubic-bezier(.22,.61,.36,1);
 
 }
 
@@ -339,13 +340,18 @@ body{
 
 .answer-btn:hover{
 
-    transform:translateY(-3px);
-
-    background:#fff;
+    transform:
+        translateY(-4px)
+        scale(1.02);
 
     box-shadow:
+        0 20px 40px rgba(60,45,25,.15);
 
-        0 18px 40px rgba(60,45,25,.14);
+}
+
+.answer-btn:active{
+
+    transform:scale(.97);
 
 }
 
@@ -858,6 +864,44 @@ body{
         transition:none !important;
 
         scroll-behavior:auto !important;
+
+    }
+
+}
+
+/* ==================================================
+   COFFEE ANIMATION
+================================================== */
+
+.coffee-image{
+
+    animation:coffeePop .75s cubic-bezier(.18,.89,.32,1.25);
+
+}
+
+@keyframes coffeePop{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+            translateY(30px)
+            scale(.75);
+
+    }
+
+    70%{
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:scale(1);
 
     }
 
