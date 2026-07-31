@@ -1,0 +1,290 @@
+/* ==================================================
+   RESET
+================================================== */
+
+*,
+*::before,
+*::after {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+
+    font-size: 16px;
+
+}
+
+body {
+
+    font-family: "Inter", sans-serif;
+
+    background: #09090f;
+    color: white;
+
+    overflow: hidden;
+
+}
+
+/* ==================================================
+   BACKGROUND
+================================================== */
+
+.background {
+
+    position: fixed;
+    inset: 0;
+
+    overflow: hidden;
+
+    z-index: -2;
+
+}
+
+.blob {
+
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    border-radius: 50%;
+
+    filter: blur(120px);
+
+    opacity: .45;
+
+    animation: float 18s ease-in-out infinite;
+
+}
+
+.blob1 {
+
+    background: #ff00aa;
+
+    top: -150px;
+    left: -120px;
+
+}
+
+.blob2 {
+
+    background: #7b2cff;
+
+    bottom: -180px;
+    right: -100px;
+
+    animation-delay: 5s;
+
+}
+
+.blob3 {
+
+    background: #00a8ff;
+
+    top: 40%;
+    left: 45%;
+
+    animation-delay: 10s;
+
+}
+
+@keyframes float {
+
+    0% {
+
+        transform:
+            translate(0,0)
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            translate(40px,-50px)
+            scale(1.15);
+
+    }
+
+    100% {
+
+        transform:
+            translate(0,0)
+            scale(1);
+
+    }
+
+}
+
+/* ==================================================
+   APP
+================================================== */
+
+.app {
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+
+    padding: 2rem;
+
+}
+
+/* ==================================================
+   CARD
+================================================== */
+
+.card {
+
+    width: min(720px,100%);
+
+    padding: 3rem;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,.07);
+
+    backdrop-filter: blur(28px);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+
+        0 20px 80px rgba(0,0,0,.45),
+        0 0 40px rgba(123,44,255,.15);
+
+}
+
+/* ==================================================
+   TYPOGRAPHY
+================================================== */
+
+h1 {
+
+    font-size: 2.3rem;
+
+    font-weight: 700;
+
+    margin-bottom: 2rem;
+
+}
+
+.step {
+
+    display: inline-block;
+
+    margin-top: 1rem;
+
+    color: rgba(255,255,255,.6);
+
+    font-size: .95rem;
+
+}
+
+h2 {
+
+    margin-top: 2rem;
+
+    margin-bottom: 2rem;
+
+    font-size: 2rem;
+
+    line-height: 1.2;
+
+}
+
+/* ==================================================
+   PROGRESS
+================================================== */
+
+.progress {
+
+    width: 100%;
+    height: 10px;
+
+    border-radius: 999px;
+
+    overflow: hidden;
+
+    background: rgba(255,255,255,.08);
+
+}
+
+.progress-bar {
+
+    width: 16.6%;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: linear-gradient(
+        90deg,
+        #ff00aa,
+        #7b2cff,
+        #00a8ff
+    );
+
+}
+
+/* ==================================================
+   ANSWERS
+================================================== */
+
+.answers {
+
+    display: grid;
+
+    gap: 1rem;
+
+}
+
+.answers button {
+
+    border: none;
+
+    cursor: pointer;
+
+    border-radius: 18px;
+
+    padding: 1.15rem;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    color: white;
+
+    background: rgba(255,255,255,.06);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    transition: .25s;
+
+}
+
+.answers button:hover {
+
+    transform: translateY(-2px);
+
+    background: rgba(255,255,255,.12);
+
+    border-color: rgba(255,255,255,.18);
+
+    box-shadow:
+        0 0 25px rgba(123,44,255,.25);
+
+}
+
+.answers button:active {
+
+    transform: scale(.98);
+
+}
