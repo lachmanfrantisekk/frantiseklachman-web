@@ -1,317 +1,784 @@
 const coffees = [
 
-{
-    id: "white-chocolate-strawberry",
+    {
+        id: "white-chocolate-strawberry",
 
-    name: "White Chocolate & Strawberry",
+        name: "White Chocolate & Strawberry",
 
-    caffeine: true,
+        image: "white-chocolate-strawberry.webp",
 
-    iced: false,
+        accent: "#F56FB3",
 
-    cup: "mug",
+        volume: 230,
 
-    milk: true,
+        cup: "mug",
 
-    intensity: "light",
+        caffeine: true,
 
-    tastes: [
-        "sweet",
-        "fruity"
-    ]
-},
+        intensity: 3,
 
-{
-    id: "coconut-vanilla-over-ice",
+        description: "Krémová ochucená káva s tóny bílé čokolády a jahod.",
 
-    name: "Coconut Vanilla Over Ice",
+        scores: {
 
-    caffeine: true,
+            milk: 3,
 
-    iced: true,
+            iced: 2,
 
-    cup: "mug",
+            caffeine: 3,
 
-    milk: false,
+            flavors: {
 
-    intensity: "light",
+                chocolate: 2,
+                roasted: 0,
+                fruity: 3,
+                floral: 0,
+                vanilla: 1,
+                sweet: 3,
+                nutty: 0,
+                cereal: 0
 
-    tastes: [
-        "sweet",
-        "vanilla"
-    ]
-},
+            }
 
-{
-    id: "pumpkin-spice-cake",
+        },
 
-    name: "Pumpkin Spice Cake",
+        notes: [
 
-    caffeine: true,
+            "Bílá čokoláda",
+            "Jahody",
+            "Limited Edition"
 
-    iced: false,
+        ]
 
-    cup: "mug",
+    },
 
-    milk: true,
+    {
+        id: "coconut-vanilla-over-ice",
 
-    intensity: "medium",
+        name: "Coconut Vanilla Over Ice",
 
-    tastes: [
-        "sweet",
-        "spicy"
-    ]
-},
+        image: "coconut-vanilla-over-ice.webp",
 
-{
-    id: "lavender-vanilla-decaf",
+        accent: "#66C6E8",
 
-    name: "French Lavender & Vanilla Decaffeinato",
+        volume: 230,
 
-    caffeine: false,
+        cup: "mug",
 
-    iced: false,
+        caffeine: true,
 
-    cup: "mug",
+        intensity: 3,
 
-    milk: true,
+        description: "Vanilkovo-kokosová káva vytvořená pro ledové recepty.",
 
-    intensity: "light",
+        scores: {
 
-    tastes: [
-        "floral",
-        "vanilla"
-    ]
-},
+            milk: 2,
 
-{
-    id: "double-espresso-dolce",
+            iced: 3,
 
-    name: "Double Espresso Dolce",
+            caffeine: 3,
 
-    caffeine: true,
+            flavors: {
 
-    iced: false,
+                chocolate: 0,
+                roasted: 0,
+                fruity: 1,
+                floral: 0,
+                vanilla: 3,
+                sweet: 3,
+                nutty: 1,
+                cereal: 0
 
-    cup: "double",
+            }
 
-    milk: true,
+        },
 
-    intensity: "medium",
+        notes: [
 
-    tastes: [
-        "sweet",
-        "cereal"
-    ]
-},
+            "Kokos",
+            "Vanilka",
+            "Over Ice"
 
-{
-    id: "costa-rica",
+        ]
 
-    name: "Costa Rica",
+    },
 
-    caffeine: true,
+    {
+        id: "pumpkin-spice-cake",
 
-    iced: false,
+        name: "Pumpkin Spice Cake",
 
-    cup: "mug",
+        image: "pumpkin-spice-cake.webp",
 
-    milk: false,
+        accent: "#D87428",
 
-    intensity: "medium",
+        volume: 230,
 
-    tastes: [
-        "cereal",
-        "fruity"
-    ]
-},
+        cup: "mug",
 
-{
-    id: "ethiopia",
+        caffeine: true,
 
-    name: "Ethiopia",
+        intensity: 4,
 
-    caffeine: true,
+        description: "Sladká sezónní káva s kořeněnými tóny dýňového koláče.",
 
-    iced: false,
+        scores: {
 
-    cup: "mug",
+            milk: 3,
 
-    milk: false,
+            iced: 1,
 
-    intensity: "light",
+            caffeine: 3,
 
-    tastes: [
-        "floral",
-        "fruity"
-    ]
-},
+            flavors: {
 
-{
-    id: "melozio-decaf",
+                chocolate: 0,
+                roasted: 1,
+                fruity: 0,
+                floral: 0,
+                vanilla: 1,
+                sweet: 3,
+                nutty: 1,
+                cereal: 2
 
-    name: "Melozio Decaffeinato",
+            }
 
-    caffeine: false,
+        },
 
-    iced: false,
+        notes: [
 
-    cup: "mug",
+            "Dýňové koření",
+            "Sladká",
+            "Limited Edition"
 
-    milk: true,
+        ]
 
-    intensity: "light",
+    },
 
-    tastes: [
-        "sweet",
-        "cereal"
-    ]
-},
+    {
+        id: "french-lavender-vanilla-decaf",
 
-{
-    id: "colombia",
+        name: "French Lavender & Vanilla Decaffeinato",
 
-    name: "Colombia",
+        image: "french-lavender-vanilla-decaf.webp",
 
-    caffeine: true,
+        accent: "#A87CEB",
 
-    iced: false,
+        volume: 230,
 
-    cup: "mug",
+        cup: "mug",
 
-    milk: false,
+        caffeine: false,
 
-    intensity: "medium",
+        intensity: 2,
 
-    tastes: [
-        "fruity"
-    ]
-},
+        description: "Jemná bezkofeinová ochucená káva s levandulí a vanilkou.",
 
-{
-    id: "bianco-doppio",
+        scores: {
 
-    name: "Bianco Doppio",
+            milk: 3,
 
-    caffeine: true,
+            iced: 2,
 
-    iced: false,
+            caffeine: 0,
 
-    cup: "double",
+            flavors: {
 
-    milk: true,
+                chocolate: 0,
+                roasted: 0,
+                fruity: 0,
+                floral: 3,
+                vanilla: 3,
+                sweet: 3,
+                nutty: 0,
+                cereal: 0
 
-    intensity: "medium",
+            }
 
-    tastes: [
-        "sweet",
-        "cereal"
-    ]
-},
+        },
 
-{
-    id: "sweet-vanilla-decaf",
+        notes: [
 
-    name: "Sweet Vanilla Decaffeinato",
+            "Bez kofeinu",
+            "Levandule",
+            "Vanilka"
 
-    caffeine: false,
+        ]
 
-    iced: false,
+    },
 
-    cup: "mug",
+    {
+        id: "double-espresso-dolce",
 
-    milk: true,
+        name: "Double Espresso Dolce",
 
-    intensity: "light",
+        image: "double-espresso-dolce.webp",
 
-    tastes: [
-        "vanilla",
-        "sweet"
-    ]
-},
+        accent: "#B57A44",
 
-{
-    id: "pistachio-vanilla-over-ice",
+        volume: 80,
 
-    name: "Pistachio Vanilla Flavour Over Ice",
+        cup: "double",
 
-    caffeine: true,
+        caffeine: true,
 
-    iced: true,
+        intensity: 5,
 
-    cup: "mug",
+        description: "Jemné Double Espresso se sladovými cereálními tóny.",
 
-    milk: true,
+        scores: {
 
-    intensity: "light",
+            milk: 3,
 
-    tastes: [
-        "vanilla",
-        "sweet",
-        "nutty"
-    ]
-},
+            iced: 1,
 
-{
-    id: "altissio",
+            caffeine: 3,
 
-    name: "Altissio",
+            flavors: {
 
-    caffeine: true,
+                chocolate: 1,
+                roasted: 1,
+                fruity: 0,
+                floral: 0,
+                vanilla: 0,
+                sweet: 2,
+                nutty: 1,
+                cereal: 3
 
-    iced: false,
+            }
 
-    cup: "espresso",
+        },
 
-    milk: true,
+        notes: [
 
-    intensity: "strong",
+            "80 ml",
+            "Sladové tóny",
+            "Vyvážená"
 
-    tastes: [
-        "chocolate"
-    ]
-},
+        ]
 
-{
-    id: "double-espresso-scuro",
+    },
 
-    name: "Double Espresso Scuro",
+     {
+        id: "costa-rica",
 
-    caffeine: true,
+        name: "Costa Rica",
 
-    iced: false,
+        image: "costa-rica.webp",
 
-    cup: "double",
+        accent: "#B86F3D",
 
-    milk: true,
+        volume: 150,
 
-    intensity: "strong",
+        cup: "gran-lungo",
 
-    tastes: [
-        "chocolate",
-        "roasted"
-    ]
-},
+        caffeine: true,
 
-{
-    id: "double-espresso-chiaro",
+        intensity: 7,
 
-    name: "Double Espresso Chiaro",
+        description: "Single Origin z Kostariky s výraznými sladovými a ovocnými tóny.",
 
-    caffeine: true,
+        scores: {
 
-    iced: false,
+            milk: 1,
 
-    cup: "double",
+            iced: 1,
 
-    milk: true,
+            caffeine: 3,
 
-    intensity: "medium",
+            flavors: {
 
-    tastes: [
-        "wood",
-        "chocolate"
-    ]
-}
+                chocolate: 0,
+                roasted: 1,
+                fruity: 2,
+                floral: 1,
+                vanilla: 0,
+                sweet: 2,
+                nutty: 1,
+                cereal: 3
+
+            }
+
+        },
+
+        notes: [
+
+            "150 ml",
+            "Single Origin",
+            "Sladové tóny"
+
+        ]
+
+    },
+
+    {
+        id: "ethiopia",
+
+        name: "Ethiopia",
+
+        image: "ethiopia.webp",
+
+        accent: "#A65E3A",
+
+        volume: 150,
+
+        cup: "gran-lungo",
+
+        caffeine: true,
+
+        intensity: 4,
+
+        description: "Lehká a aromatická arabika s květinovými a ovocnými tóny.",
+
+        scores: {
+
+            milk: 0,
+
+            iced: 1,
+
+            caffeine: 3,
+
+            flavors: {
+
+                chocolate: 0,
+                roasted: 0,
+                fruity: 3,
+                floral: 3,
+                vanilla: 0,
+                sweet: 1,
+                nutty: 0,
+                cereal: 0
+
+            }
+
+        },
+
+        notes: [
+
+            "Arabica",
+            "Květinová",
+            "Lehká"
+
+        ]
+
+    },
+
+    {
+        id: "melozio-decaffeinato",
+
+        name: "Melozio Decaffeinato",
+
+        image: "melozio-decaffeinato.webp",
+
+        accent: "#B59C66",
+
+        volume: 230,
+
+        cup: "mug",
+
+        caffeine: false,
+
+        intensity: 6,
+
+        description: "Vyvážená bezkofeinová káva s jemnou sladkostí.",
+
+        scores: {
+
+            milk: 2,
+
+            iced: 1,
+
+            caffeine: 0,
+
+            flavors: {
+
+                chocolate: 1,
+                roasted: 1,
+                fruity: 0,
+                floral: 0,
+                vanilla: 0,
+                sweet: 2,
+                nutty: 1,
+                cereal: 2
+
+            }
+
+        },
+
+        notes: [
+
+            "230 ml",
+            "Bez kofeinu",
+            "Vyvážená"
+
+        ]
+
+    },
+
+    {
+        id: "colombia",
+
+        name: "Colombia",
+
+        image: "colombia.webp",
+
+        accent: "#B34A2F",
+
+        volume: 230,
+
+        cup: "mug",
+
+        caffeine: true,
+
+        intensity: 8,
+
+        description: "Plná kolumbijská arabika s ovocným charakterem a vínovou aciditou.",
+
+        scores: {
+
+            milk: 1,
+
+            iced: 1,
+
+            caffeine: 3,
+
+            flavors: {
+
+                chocolate: 1,
+                roasted: 2,
+                fruity: 3,
+                floral: 1,
+                vanilla: 0,
+                sweet: 1,
+                nutty: 0,
+                cereal: 1
+
+            }
+
+        },
+
+        notes: [
+
+            "230 ml",
+            "Single Origin",
+            "Ovocná"
+
+        ]
+
+    },
+
+    {
+        id: "bianco-doppio",
+
+        name: "Bianco Doppio",
+
+        image: "bianco-doppio.webp",
+
+        accent: "#D2B18C",
+
+        volume: 80,
+
+        cup: "double",
+
+        caffeine: true,
+
+        intensity: 0,
+
+        description: "Double Espresso navržené speciálně pro mléčné recepty.",
+
+        scores: {
+
+            milk: 3,
+
+            iced: 2,
+
+            caffeine: 3,
+
+            flavors: {
+
+                chocolate: 1,
+                roasted: 1,
+                fruity: 0,
+                floral: 0,
+                vanilla: 1,
+                sweet: 2,
+                nutty: 1,
+                cereal: 3
+
+            }
+
+        },
+
+        notes: [
+
+            "80 ml",
+            "Na mléko",
+            "Barista Creations"
+
+        ]
+
+    },
+
+    {
+        id: "sweet-vanilla-decaffeinato",
+
+        name: "Sweet Vanilla Decaffeinato",
+
+        image: "sweet-vanilla-decaffeinato.webp",
+
+        accent: "#E0C27B",
+
+        volume: 230,
+
+        cup: "mug",
+
+        caffeine: false,
+
+        intensity: 6,
+
+        description: "Bezkofeinová ochucená káva s výraznou vanilkou a jemnou sladkostí.",
+
+        scores: {
+
+            milk: 3,
+
+            iced: 2,
+
+            caffeine: 0,
+
+            flavors: {
+
+                chocolate: 0,
+                roasted: 0,
+                fruity: 0,
+                floral: 0,
+                vanilla: 3,
+                sweet: 3,
+                nutty: 1,
+                cereal: 1
+
+            }
+
+        },
+
+        notes: [
+
+            "230 ml",
+            "Bez kofeinu",
+            "Vanilka"
+
+        ]
+
+    },
+
+    {
+        id: "pistachio-vanilla-over-ice",
+
+        name: "Pistachio Vanilla Flavour Over Ice",
+
+        image: "pistachio-vanilla-over-ice.webp",
+
+        accent: "#8CCF7E",
+
+        volume: 230,
+
+        cup: "mug",
+
+        caffeine: true,
+
+        intensity: 4,
+
+        description: "Sladká pistáciovo-vanilková káva vytvořená pro ledové recepty.",
+
+        scores: {
+
+            milk: 3,
+
+            iced: 3,
+
+            caffeine: 3,
+
+            flavors: {
+
+                chocolate: 0,
+                roasted: 0,
+                fruity: 0,
+                floral: 0,
+                vanilla: 3,
+                sweet: 3,
+                nutty: 3,
+                cereal: 0
+
+            }
+
+        },
+
+        notes: [
+
+            "Over Ice",
+            "Pistácie",
+            "Vanilka"
+
+        ]
+
+    },
+
+    {
+        id: "altissio",
+
+        name: "Altissio",
+
+        image: "altissio.webp",
+
+        accent: "#6D3B28",
+
+        volume: 40,
+
+        cup: "espresso",
+
+        caffeine: true,
+
+        intensity: 9,
+
+        description: "Plné espresso s hustou cremou a kakaovými tóny.",
+
+        scores: {
+
+            milk: 3,
+
+            iced: 1,
+
+            caffeine: 3,
+
+            flavors: {
+
+                chocolate: 3,
+                roasted: 2,
+                fruity: 0,
+                floral: 0,
+                vanilla: 0,
+                sweet: 1,
+                nutty: 1,
+                cereal: 0
+
+            }
+
+        },
+
+        notes: [
+
+            "40 ml",
+            "Espresso",
+            "Kakao"
+
+        ]
+
+    },
+
+    {
+        id: "double-espresso-scuro",
+
+        name: "Double Espresso Scuro",
+
+        image: "double-espresso-scuro.webp",
+
+        accent: "#4B2C24",
+
+        volume: 80,
+
+        cup: "double",
+
+        caffeine: true,
+
+        intensity: 11,
+
+        description: "Intenzivní dvojité espresso s kakaovými a praženými tóny.",
+
+        scores: {
+
+            milk: 3,
+
+            iced: 1,
+
+            caffeine: 3,
+
+            flavors: {
+
+                chocolate: 3,
+                roasted: 3,
+                fruity: 0,
+                floral: 0,
+                vanilla: 0,
+                sweet: 1,
+                nutty: 1,
+                cereal: 0
+
+            }
+
+        },
+
+        notes: [
+
+            "80 ml",
+            "Kakao",
+            "Intenzita 11"
+
+        ]
+
+    },
+
+    {
+        id: "double-espresso-chiaro",
+
+        name: "Double Espresso Chiaro",
+
+        image: "double-espresso-chiaro.webp",
+
+        accent: "#A56B4A",
+
+        volume: 80,
+
+        cup: "double",
+
+        caffeine: true,
+
+        intensity: 8,
+
+        description: "Jemnější Double Espresso s dřevitými a čokoládovými tóny.",
+
+        scores: {
+
+            milk: 3,
+
+            iced: 1,
+
+            caffeine: 3,
+
+            flavors: {
+
+                chocolate: 2,
+                roasted: 1,
+                fruity: 0,
+                floral: 0,
+                vanilla: 0,
+                sweet: 1,
+                nutty: 1,
+                cereal: 2
+
+            }
+
+        },
+
+        notes: [
+
+            "80 ml",
+            "Dřevité tóny",
+            "Vyvážená"
+
+        ]
+
+    }
 
 ];
+
