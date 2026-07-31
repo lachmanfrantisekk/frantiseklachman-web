@@ -711,3 +711,13 @@ console.log(
     "Coffee Picker initialized successfully."
 
 );
+
+if ("serviceWorker" in navigator) {
+
+    window.addEventListener("load", () => {
+
+        navigator.serviceWorker.register("sw.js");
+
+    });
+
+}
