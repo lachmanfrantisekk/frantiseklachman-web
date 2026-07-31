@@ -95,14 +95,15 @@ function renderQuestion() {
 
     `;
 
-   questionContainer.classList.remove("fade");
+  const questionElement = questionContainer.querySelector(".question");
+
+questionElement.classList.remove("fade");
 
 requestAnimationFrame(() => {
 
-    questionContainer.classList.add("fade");
+    questionElement.classList.add("fade");
 
 });
-
     bindAnswerButtons();
 
 }
