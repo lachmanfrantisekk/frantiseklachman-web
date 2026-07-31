@@ -1,5 +1,9 @@
 const questions = [
 
+    /* ==================================================
+       1. CAFFEINE
+    ================================================== */
+
     {
         id: "caffeine",
 
@@ -8,12 +12,12 @@ const questions = [
         answers: [
 
             {
-                text: "Ano",
+                text: "☕ Ano",
                 value: true
             },
 
             {
-                text: "Bez kofeinu",
+                text: "🌙 Bez kofeinu",
                 value: false
             }
 
@@ -21,16 +25,79 @@ const questions = [
 
     },
 
+    /* ==================================================
+       2. CUP
+    ================================================== */
+
     {
+        id: "cup",
 
-        id: "temperature",
-
-        title: "Jak ji chceš?",
+        title: "Jak velkou kávu chceš?",
 
         answers: [
 
             {
-                text: "☕ Horkou",
+                text: "☕ Espresso (40 ml)",
+                value: "espresso"
+            },
+
+            {
+                text: "☕☕ Double Espresso (80 ml)",
+                value: "double"
+            },
+
+            {
+                text: "☕☕ Gran Lungo (150 ml)",
+                value: "gran-lungo"
+            },
+
+            {
+                text: "☕☕☕ Mug (230 ml)",
+                value: "mug"
+            }
+
+        ]
+
+    },
+
+    /* ==================================================
+       3. MILK
+    ================================================== */
+
+    {
+        id: "milk",
+
+        title: "Budeš přidávat mléko?",
+
+        answers: [
+
+            {
+                text: "🥛 Ano",
+                value: "milk"
+            },
+
+            {
+                text: "⚫ Ne",
+                value: "black"
+            }
+
+        ]
+
+    },
+
+    /* ==================================================
+       4. ICED
+    ================================================== */
+
+    {
+        id: "temperature",
+
+        title: "Jak ji budeš připravovat?",
+
+        answers: [
+
+            {
+                text: "🔥 Horkou",
                 value: "hot"
             },
 
@@ -43,75 +110,29 @@ const questions = [
 
     },
 
-    {
-
-        id: "cup",
-
-        title: "Jak velký šálek?",
-
-        answers: [
-
-            {
-                text: "Espresso (40 ml)",
-                value: "espresso"
-            },
-
-            {
-                text: "Double Espresso (80 ml)",
-                value: "double"
-            },
-
-            {
-                text: "Mug (230 ml)",
-                value: "mug"
-            }
-
-        ]
-
-    },
+    /* ==================================================
+       5. INTENSITY
+    ================================================== */
 
     {
-
-        id: "milk",
-
-        title: "Přidáš mléko?",
-
-        answers: [
-
-            {
-                text: "Ano",
-                value: true
-            },
-
-            {
-                text: "Ne",
-                value: false
-            }
-
-        ]
-
-    },
-
-    {
-
         id: "intensity",
 
-        title: "Jak silnou?",
+        title: "Jak silnou kávu chceš?",
 
         answers: [
 
             {
-                text: "Jemnou",
+                text: "🌸 Jemnou",
                 value: "light"
             },
 
             {
-                text: "Střední",
+                text: "☕ Vyváženou",
                 value: "medium"
             },
 
             {
-                text: "Silnou",
+                text: "💪 Silnou",
                 value: "strong"
             }
 
@@ -119,22 +140,25 @@ const questions = [
 
     },
 
-    {
+    /* ==================================================
+       6. FLAVOUR
+    ================================================== */
 
-        id: "taste",
+    {
+        id: "flavour",
 
         title: "Na co máš chuť?",
 
         answers: [
 
             {
-                text: "🍫 Čokoládová",
+                text: "🍫 Čokoláda",
                 value: "chocolate"
             },
 
             {
-                text: "🌰 Oříšková",
-                value: "nutty"
+                text: "🌸 Květiny",
+                value: "floral"
             },
 
             {
@@ -143,13 +167,28 @@ const questions = [
             },
 
             {
-                text: "🌸 Květinová",
-                value: "floral"
+                text: "🌰 Oříšky",
+                value: "nutty"
             },
 
             {
-                text: "🍮 Sladká / Vanilková",
+                text: "🍦 Vanilka",
+                value: "vanilla"
+            },
+
+            {
+                text: "🍯 Sladká",
                 value: "sweet"
+            },
+
+            {
+                text: "🌾 Cereální",
+                value: "cereal"
+            },
+
+            {
+                text: "🔥 Pražená",
+                value: "roasted"
             }
 
         ]
