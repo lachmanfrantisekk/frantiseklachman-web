@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta name="robots" content="index, follow" />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <title>František Lachman — Web Developer & AI Builder</title>
+
+  <meta
+    name="description"
+    content="Tvořím moderní webové stránky, webové aplikace a digitální produkty s využitím AI. Webový vývoj, webdesign a AI řešení na míru."
+  />
+
+  <link
+    rel="canonical"
+    href="https://frantiseklachman.com/"
+  />
+
+  <meta name="theme-color" content="#3b82f6" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="František Lachman" />
+  <meta
+    property="og:title"
+    content="František Lachman — Webový vývojář, AI & webdesign"
+  />
+  <meta
+    property="og:description"
+    content="Tvořím moderní webové stránky, webové aplikace, digitální produkty a AI-powered řešení."
+  />
+  <meta
+    property="og:url"
+    content="https://frantiseklachman.com/"
+  />
+  <meta property="og:locale" content="cs_CZ" />
+
+  <!-- Twitter / X -->
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
+  <meta
+    name="twitter:title"
+    content="František Lachman — Web Developer & AI Builder"
+  />
+  <meta
+    name="twitter:description"
+    content="Tvořím moderní webové stránky, webové aplikace, digitální produkty a AI-powered řešení."
+  />
+  <meta
+    name="twitter:url"
+    content="https://frantiseklachman.com/"
+  />
+
+  <!-- Person Schema -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "František Lachman",
+      "url": "https://frantiseklachman.com/",
+      "jobTitle": "Web Developer & AI Builder",
+      "description": "Web developer, AI builder and creative technologist creating modern websites, web applications and digital products."
+    }
+  </script>
+
+  <!-- Website Schema -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "František Lachman",
+      "url": "https://frantiseklachman.com/"
+    }
+  </script>
+
+
+
+  <script
+    type="module"
+    crossorigin
+    src="/assets/site-65a07f151c.js"
+  ></script>
+
+  <link
+    rel="stylesheet"
+    crossorigin
+    href="/assets/index-qNwrKH0D.css"
+  />
+
+  <style>
+ /* =========================================
+   AMBIENT BLUE BLOBS
+   ========================================= */
+
+.ambient-blobs {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.55;
+  animation: blobFloat 16s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* TOP */
+.blob-1 {
+  width: 420px;
+  height: 420px;
+  top: -120px;
+  left: -100px;
+  background: rgba(30, 100, 220, 0.55);
+}
+
+/* UPPER RIGHT */
+.blob-2 {
+  width: 360px;
+  height: 360px;
+  top: 15%;
+  right: -120px;
+  background: rgba(0, 170, 255, 0.45);
+  animation-delay: -4s;
+}
+
+/* MIDDLE LEFT */
+.blob-3 {
+  width: 480px;
+  height: 480px;
+  top: 32%;
+  left: -180px;
+  background: rgba(25, 70, 180, 0.48);
+  animation-delay: -8s;
+}
+
+/* CENTER RIGHT */
+.blob-4 {
+  width: 430px;
+  height: 430px;
+  top: 47%;
+  right: -150px;
+  background: rgba(0, 140, 230, 0.48);
+  animation-delay: -11s;
+}
+
+/* LOWER LEFT */
+.blob-5 {
+  width: 390px;
+  height: 390px;
+  top: 64%;
+  left: -130px;
+  background: rgba(20, 90, 210, 0.52);
+  animation-delay: -6s;
+}
+
+/* LOWER RIGHT */
+.blob-6 {
+  width: 470px;
+  height: 470px;
+  top: 76%;
+  right: -180px;
+  background: rgba(0, 160, 240, 0.42);
+  animation-delay: -13s;
+}
+
+/* VERY BOTTOM */
+.blob-7 {
+  width: 430px;
+  height: 430px;
+  top: 91%;
+  left: 20%;
+  background: rgba(25, 75, 190, 0.45);
+  animation-delay: -3s;
+}
+
+/* EXTRA CENTER */
+.blob-8 {
+  width: 300px;
+  height: 300px;
+  top: 40%;
+  left: 42%;
+  background: rgba(0, 120, 220, 0.22);
+  filter: blur(90px);
+  animation-delay: -9s;
+}
+
+
+/* =========================================
+   FLOATING ANIMATION
+   ========================================= */
+
+@keyframes blobFloat {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  25% {
+    transform: translate3d(35px, -25px, 0) scale(1.05);
+  }
+
+  50% {
+    transform: translate3d(-20px, 35px, 0) scale(0.96);
+  }
+
+  75% {
+    transform: translate3d(25px, 15px, 0) scale(1.04);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+  .blob {
+    filter: blur(55px);
+    opacity: 0.48;
+  }
+
+  .blob-1,
+  .blob-3,
+  .blob-5,
+  .blob-7 {
+    left: -180px;
+  }
+
+  .blob-2,
+  .blob-4,
+  .blob-6 {
+    right: -180px;
+  }
+
+  .blob-8 {
+    display: none;
+  }
+}
+
+    </style>
+  
+</head>
+  <body>
+    <div class="ambient-blobs" aria-hidden="true">
+  <span class="blob blob-1"></span>
+  <span class="blob blob-2"></span>
+  <span class="blob blob-3"></span>
+  <span class="blob blob-4"></span>
+  <span class="blob blob-5"></span>
+
+</div>
+    <div id="root"></div>
+  </body>
+</html>
