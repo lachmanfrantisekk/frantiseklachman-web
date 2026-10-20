@@ -1,0 +1,32 @@
+OPRAVA NÁZVŮ A SLUGŮ PROJEKTŮ – frantiseklachman.com
+
+CO JE OPRAVENO:
+- Název projektu už přijímá mezery, tečky, české znaky i běžnou interpunkci.
+- Slug nyní přijímá písmena (včetně diakritiky), číslice, mezery, tečky, pomlčky a podtržítka.
+- Odkazy na projekty správně kódují mezery a diakritiku v URL a po otevření je dekódují.
+- Nepovoluje se lomítko /, ?, # nebo jiné znaky, které by rozbily URL.
+- Slug musí obsahovat aspoň jedno písmeno nebo číslici a nesmí přesáhnout 120 znaků.
+- Slug musí být mezi projekty unikátní.
+
+PŘÍKLAD:
+Title: František Lachman — Portfolio 2.0
+Slug: frantiseklachman.com
+URL: https://frantiseklachman.com/project/frantiseklachman.com
+
+POSTUP – DŮLEŽITÉ OBA KROKY:
+1. Cloudflare Dashboard → Workers & Pages → lachtan-messages-api → Edit code.
+   Nahraď stávající kód obsahem cloudflare/worker.js a klikni Deploy.
+   ZACHOVEJ existující D1 binding DB, ADMIN_USERNAME, ADMIN_PASSWORD a SESSION_SECRET.
+   Databázi nemaž a nespouštěj žádné nové SQL.
+2. GitHub repozitář, ze kterého je publikován frantiseklachman.com:
+   Nahraj OBSAH složky github-web do kořene větve main (Deploy from a branch → main → /(root)).
+   Přepiš index.html, 404.html, admin/index.html a assets/site-65a07f151c.js.
+   Ostatní soubory jsou součástí balíčku, aby šel nahrát celý web.
+3. Po dokončení nasazení otevři web a použij Ctrl+Shift+R.
+4. V /admin zkus vytvořit projekt s názvem a slugem s tečkou a mezerou.
+   Ulož ho a zkus otevřít jeho detail i po obnovení F5.
+
+POZNÁMKA:
+Název (Title) není součástí URL, může obsahovat další interpunkci.
+Upravený slug staršího projektu změní jeho veřejnou adresu.
+Testy lokálně ověřují kód, ale skutečné nasazení GitHub/Cloudflare je třeba potvrdit.
