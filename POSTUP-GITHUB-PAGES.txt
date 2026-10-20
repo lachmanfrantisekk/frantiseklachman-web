@@ -1,0 +1,15 @@
+OPRAVA TESTOVACÍ ADRESY GITHUB PAGES
+
+1. Nahrajte OBSAH této složky do kořene repozitáře frantiseklachman-web (main).
+2. Settings > Pages > Deploy from a branch > main > /(root).
+3. V Pages zkontrolujte, že Custom domain je prázdné (dokud nebude připojena frantiseklachman.com).
+4. Otestujte https://lachmanfrantisekk.github.io/frantiseklachman-web/
+5. Administrace: https://lachmanfrantisekk.github.io/frantiseklachman-web/admin/
+6. Po nasazení vyčkejte a proveďte Ctrl+Shift+R.
+
+POZOR: Formuláře, přihlášení a projekty používají /api na stejné doméně.
+GitHub Pages /api nemá, takže plnou funkčnost D1 lze otestovat až na frantiseklachman.com
+s nakonfigurovanou Cloudflare route a Workerem.
+
+Při budoucím připojení domény nastavte frantiseklachman.com v GitHub Pages Custom domain.
+Navigace automaticky pozná doménu a nebude používat /frantiseklachman-web na vlastní doméně.
